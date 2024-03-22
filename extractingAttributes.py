@@ -1,7 +1,7 @@
 import sys
 import tkinter as tk
 from tkinter import messagebox
-from docx import Document
+# from docx import Document
 import spacy
 import re
 import fitz
@@ -9,7 +9,8 @@ from spacy.matcher import Matcher
 from natasha import Segmenter, NewsEmbedding, NewsMorphTagger, NewsSyntaxParser, Doc, NewsNERTagger
 
 nlp = spacy.load("ru_core_news_lg")
-
+pathModel = sys.argv[0].split("pythonscript.py")[0] + "ModelNER\\output\\model-best"
+nlp_model = spacy.load(pathModel)
 def build_path():
     length = len(sys.argv)
     if length == 0:
@@ -37,10 +38,10 @@ def open_file(path):
                 text += page.get_text()
         return text
     elif extension == "docx":
-        doc = Document(path)
+        # doc = Document(path)
 
-        for paragraph in doc.paragraphs:
-            text += paragraph.text + '\n'
+        # for paragraph in doc.paragraphs:
+        #     text += paragraph.text + '\n'
         return text
     else:
         root = tk.Tk()
@@ -108,4 +109,10 @@ def get_organization(text):
     return organization
 
 def get_skills(text):
-    return ""
+    doc = nlp_model(text)
+    skills = []
+    for ents in doc.ents:
+        if ents.label_ == "SKILLS":
+            skills.append(ents.text)
+
+    return skills
