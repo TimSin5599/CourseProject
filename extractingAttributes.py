@@ -11,6 +11,7 @@ from natasha import Segmenter, NewsEmbedding, NewsMorphTagger, NewsSyntaxParser,
 nlp = spacy.load("ru_core_news_lg")
 pathModel = sys.argv[0].split("pythonscript.py")[0] + "ModelNER\\output\\model-best"
 nlp_model = spacy.load(pathModel)
+
 def build_path():
     length = len(sys.argv)
     if length == 0:
@@ -108,11 +109,30 @@ def get_organization(text):
     organization = [i.text for i in doc.spans if i.type == "ORG"]
     return organization
 
-def get_skills(text):
+def get_attributes_from_model(text):
     doc = nlp_model(text)
     skills = []
+    edu = []
+    org = []
+    languages = []
+    self_summary = []
+    speciality = []
+    faculty = []
+
     for ents in doc.ents:
         if ents.label_ == "SKILLS":
             skills.append(ents.text)
+        elif ents.label_ == "EDU":
+            edu.append(ents.text)
+        elif ents.label_ == "ORG":
+            org.append(ents.text)
+        elif ents.label_ == "LANGUAGES":
+            languages.append(ents.text)
+        elif ents.label_ == "SELF_SUMMARY":
+            self_summary.append(ents.text)
+        elif ents.label_ == "SPECIALITY":
+            speciality.append(ents.text)
+        elif ents.label_ == "FACULTY":
+            faculty.append(ents.text)
 
-    return skills
+    return skills, edu, org, languages, self_summary, speciality, faculty
