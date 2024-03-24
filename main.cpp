@@ -3,6 +3,7 @@
 #include <string>
 #include <tchar.h>
 #include <filesystem>
+#include <thread>
 
 static TCHAR szWindowClass[] = _T("CourseProject");
 
@@ -177,7 +178,8 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
                 if (GetOpenFileName(&ofn))
                 {
                     std::string command = std::string(pythonExecutable) + " " + fullPath + " " + szFileName;
-                    std::system(command.c_str());
+                    std::thread thread(std::system, command.c_str());
+                    thread.join();
                 }
             }
             break;
