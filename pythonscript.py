@@ -8,7 +8,7 @@ from extractingAttributes import (
     build_path,
     open_file,
     get_name,
-    get_organization,
+    get_experience,
     get_email,
     get_phone_number,
     get_attributes_from_model)
@@ -35,6 +35,12 @@ def createPDF(text, path):
     pdf.multi_cell(0,5, text)
     pdf.output(path)
 
+    root = tk.Tk()
+    root.withdraw()
+    messagebox.showinfo("Статус", "Файл с извлеченными данными успешно создан")
+    root.destroy()
+    root.quit()
+
 if __name__ == '__main__':
     path_ = build_path()
     text_ = open_file(path_)
@@ -48,6 +54,7 @@ if __name__ == '__main__':
     text += "Факультеты: " + get_text_from_array(faculty) + "\n"
     text += "Специальности: " + get_text_from_array(speciality) + "\n"
     text += "Организации: " + "\n" + get_text_from_array(org) + "\n"
+    text += "Опыт работы: " + "\n" + get_text_from_array(get_experience(text_)) + "\n"
     text += "Языки: " + get_text_from_array(languages) + "\n"
     text += "Навыки: " + "\n" + get_text_from_array(skills) + "\n"
     text += "Личная информация: " + "\n" + get_text_from_array(self_summary) + "\n"
