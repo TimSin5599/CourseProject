@@ -1,10 +1,11 @@
 import sys
 import tkinter as tk
 from tkinter import messagebox
-# from docx import Document
+
+import fitz
+from docx import Document
 import spacy
 import re
-import fitz
 from spacy.matcher import Matcher
 from natasha import Segmenter, NewsEmbedding, NewsMorphTagger, NewsSyntaxParser, Doc, NewsNERTagger
 
@@ -31,18 +32,19 @@ def open_file(path):
     if extension == "txt":
         with open(path, 'r', encoding='utf-8') as file:
             text = file.read()
+            text = text.replace("\n", " ")
         return text
     elif extension == "pdf":
         with fitz.open(path) as pdf_doc:
             for page_num in range(pdf_doc.page_count):
                 page = pdf_doc[page_num]
-                text += page.get_text()
+                text += page.get_text().replace("\n", " ")
         return text
     elif extension == "docx":
-        # doc = Document(path)
+        doc = Document(path)
 
-        # for paragraph in doc.paragraphs:
-        #     text += paragraph.text + '\n'
+        for paragraph in doc.paragraphs:
+            text += paragraph.text.replace("\n", " ")
         return text
     else:
         root = tk.Tk()
@@ -55,10 +57,14 @@ def open_file(path):
 
 
 def get_phone_number(text):
-    phones = re.findall(r"(?:(?:8|\+7)[\- ]?)?(?:\(?\d{3}\)?[\- ]?)?[\d\- ]{7,10}", text)
+    phones = re.findall(r"(?:(?:8|\+7)[\-\s]?)?(?:\(?\d{3}\)?[\-\s]?)?[\d\-\s]{7,10}", text)
     if len(phones) == 0:
         return ""
-    return phones[0]
+    text_ = str(phones[0])
+    text_ = text_[::-1].replace(" ", "", 1)[::-1]
+    text_ = text_.replace(" ", "-")
+    # text_ = text_.replace("\t", "-")
+    return text_
 
 
 def get_email(text):
@@ -80,7 +86,7 @@ def get_name(text):
         match, start, end = matches[i]
         if span is None:
             span = nlp_text[start:end]
-        elif matches[i][0] == matches[i-1][0]:
+        elif matches[i][0] == matches[i-1][0] and matches[i-1][1] == matches[i][1]:
             span = nlp_text[start:end]
             break
         else:
@@ -89,9 +95,6 @@ def get_name(text):
         return span.text
     else:
         return ""
-
-def get_experience(text):
-    return ""
 
 def get_organization(text):
     segmenter = Segmenter()
