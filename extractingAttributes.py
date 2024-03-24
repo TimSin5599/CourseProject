@@ -66,6 +66,12 @@ def get_phone_number(text):
     # text_ = text_.replace("\t", "-")
     return text_
 
+def get_experience(text):
+    match = re.findall(r'Опыт\s*работы[^\d\w]*([\u0401\u0451\u0410-\u044f\d]+\s+'
+                       r'[\u0401\u0451\u0410-\u044f\d]+\s+[\u0401\u0451\u0410-\u044f\d]+\s+[\u0401\u0451\u0410-\u044f\d]+)', text)
+    if len(match) != 0:
+        return match
+    return ""
 
 def get_email(text):
     emails = re.findall(r"[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}", text)
