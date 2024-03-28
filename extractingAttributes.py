@@ -7,7 +7,6 @@ from docx import Document
 import spacy
 import re
 from spacy.matcher import Matcher
-from natasha import PER, NamesExtractor, Doc, MorphVocab
 
 pathModel = sys.argv[0].split("pythonscript.py")[0] + "ModelNER\\output\\"
 nlp_model = spacy.load(pathModel+"model-best")
@@ -92,8 +91,7 @@ def get_name(text):
     #     return ""
     nlp_text = nlp(text)
     matcher = Matcher(nlp.vocab)
-    # pattern_only_name = [{'POS': 'PROPN'}]
-    # pattern_name_surname = [{'POS': 'PROPN'}, {'POS': 'PROPN'}]
+
     pattern_full_name = [{'POS': 'PROPN'}, {'POS': 'PROPN'}, {'POS': 'PROPN', 'OP': '?'}]
     matcher.add('NAME', [pattern_full_name])
     matches = matcher(nlp_text)
