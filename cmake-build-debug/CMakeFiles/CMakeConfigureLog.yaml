@@ -61,8 +61,8 @@ events:
     checks:
       - "Detecting C compiler ABI info"
     directories:
-      source: "C:/Users/User/CLionProjects/CourseProject/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-n0nv10"
-      binary: "C:/Users/User/CLionProjects/CourseProject/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-n0nv10"
+      source: "C:/Users/User/CLionProjects/CourseProject/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-z3gnlc"
+      binary: "C:/Users/User/CLionProjects/CourseProject/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-z3gnlc"
     cmakeVariables:
       CMAKE_C_FLAGS: ""
       CMAKE_C_FLAGS_DEBUG: "-g"
@@ -71,9 +71,9 @@ events:
       variable: "CMAKE_C_ABI_COMPILED"
       cached: true
       stdout: |
-        Change Dir: C:/Users/User/CLionProjects/CourseProject/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-n0nv10
+        Change Dir: C:/Users/User/CLionProjects/CourseProject/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-z3gnlc
         
-        Run Build Command(s):C:/Program Files/JetBrains/CLion 2023.2.2/bin/ninja/win/x64/ninja.exe -v cmTC_df13d && [1/2] C:\\ProgramData\\chocolatey\\lib\\winlibs\\tools\\mingw32\\bin\\gcc.exe   -fdiagnostics-color=always   -v -o CMakeFiles/cmTC_df13d.dir/CMakeCCompilerABI.c.obj -c "C:/Program Files/JetBrains/CLion 2023.2.2/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakeCCompilerABI.c"
+        Run Build Command(s):C:/Program Files/JetBrains/CLion 2023.2.2/bin/ninja/win/x64/ninja.exe -v cmTC_c654f && [1/2] C:\\ProgramData\\chocolatey\\lib\\winlibs\\tools\\mingw32\\bin\\gcc.exe   -fdiagnostics-color=always   -v -o CMakeFiles/cmTC_c654f.dir/CMakeCCompilerABI.c.obj -c "C:/Program Files/JetBrains/CLion 2023.2.2/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakeCCompilerABI.c"
         Using built-in specs.
         COLLECT_GCC=C:\\ProgramData\\chocolatey\\lib\\winlibs\\tools\\mingw32\\bin\\gcc.exe
         OFFLOAD_TARGET_NAMES=nvptx-none
@@ -82,8 +82,8 @@ events:
         Thread model: posix
         Supported LTO compression algorithms: zlib zstd
         gcc version 10.2.0 (MinGW-W64 i686-posix-dwarf, built by Brecht Sanders) 
-        COLLECT_GCC_OPTIONS='-fdiagnostics-color=always' '-v' '-o' 'CMakeFiles/cmTC_df13d.dir/CMakeCCompilerABI.c.obj' '-c' '-mtune=generic' '-march=pentiumpro'
-         c:/programdata/chocolatey/lib/winlibs/tools/mingw32/bin/../libexec/gcc/i686-w64-mingw32/10.2.0/cc1.exe -quiet -v -iprefix c:\\programdata\\chocolatey\\lib\\winlibs\\tools\\mingw32\\bin\\../lib/gcc/i686-w64-mingw32/10.2.0/ -D_REENTRANT C:/Program Files/JetBrains/CLion 2023.2.2/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakeCCompilerABI.c -quiet -dumpbase CMakeCCompilerABI.c -mtune=generic -march=pentiumpro -auxbase-strip CMakeFiles/cmTC_df13d.dir/CMakeCCompilerABI.c.obj -version -fdiagnostics-color=always -o C:\\Users\\User\\AppData\\Local\\Temp\\ccfm2P2H.s
+        COLLECT_GCC_OPTIONS='-fdiagnostics-color=always' '-v' '-o' 'CMakeFiles/cmTC_c654f.dir/CMakeCCompilerABI.c.obj' '-c' '-mtune=generic' '-march=pentiumpro'
+         c:/programdata/chocolatey/lib/winlibs/tools/mingw32/bin/../libexec/gcc/i686-w64-mingw32/10.2.0/cc1.exe -quiet -v -iprefix c:\\programdata\\chocolatey\\lib\\winlibs\\tools\\mingw32\\bin\\../lib/gcc/i686-w64-mingw32/10.2.0/ -D_REENTRANT C:/Program Files/JetBrains/CLion 2023.2.2/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakeCCompilerABI.c -quiet -dumpbase CMakeCCompilerABI.c -mtune=generic -march=pentiumpro -auxbase-strip CMakeFiles/cmTC_c654f.dir/CMakeCCompilerABI.c.obj -version -fdiagnostics-color=always -o C:\\Users\\User\\AppData\\Local\\Temp\\ccvOeaai.s
         GNU C17 (MinGW-W64 i686-posix-dwarf, built by Brecht Sanders) version 10.2.0 (i686-w64-mingw32)
         	compiled by GNU C version 10.2.0, GMP version 6.2.1, MPFR version 4.1.0, MPC version 1.2.1, isl version isl-0.23-GMP
         
@@ -106,13 +106,13 @@ events:
         
         GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
         Compiler executable checksum: deb3e28699c90a9be4a1bd728059bc78
-        COLLECT_GCC_OPTIONS='-fdiagnostics-color=always' '-v' '-o' 'CMakeFiles/cmTC_df13d.dir/CMakeCCompilerABI.c.obj' '-c' '-mtune=generic' '-march=pentiumpro'
-         c:/programdata/chocolatey/lib/winlibs/tools/mingw32/bin/../lib/gcc/i686-w64-mingw32/10.2.0/../../../../i686-w64-mingw32/bin/as.exe -v -o CMakeFiles/cmTC_df13d.dir/CMakeCCompilerABI.c.obj C:\\Users\\User\\AppData\\Local\\Temp\\ccfm2P2H.s
+        COLLECT_GCC_OPTIONS='-fdiagnostics-color=always' '-v' '-o' 'CMakeFiles/cmTC_c654f.dir/CMakeCCompilerABI.c.obj' '-c' '-mtune=generic' '-march=pentiumpro'
+         c:/programdata/chocolatey/lib/winlibs/tools/mingw32/bin/../lib/gcc/i686-w64-mingw32/10.2.0/../../../../i686-w64-mingw32/bin/as.exe -v -o CMakeFiles/cmTC_c654f.dir/CMakeCCompilerABI.c.obj C:\\Users\\User\\AppData\\Local\\Temp\\ccvOeaai.s
         GNU assembler version 2.36.1 (i686-w64-mingw32) using BFD version (Binutils for MinGW-W64 i686, built by Brecht Sanders) 2.36.1
         COMPILER_PATH=c:/programdata/chocolatey/lib/winlibs/tools/mingw32/bin/../libexec/gcc/i686-w64-mingw32/10.2.0/;c:/programdata/chocolatey/lib/winlibs/tools/mingw32/bin/../libexec/gcc/;c:/programdata/chocolatey/lib/winlibs/tools/mingw32/bin/../lib/gcc/i686-w64-mingw32/10.2.0/../../../../i686-w64-mingw32/bin/
         LIBRARY_PATH=c:/programdata/chocolatey/lib/winlibs/tools/mingw32/bin/../lib/gcc/i686-w64-mingw32/10.2.0/;c:/programdata/chocolatey/lib/winlibs/tools/mingw32/bin/../lib/gcc/;c:/programdata/chocolatey/lib/winlibs/tools/mingw32/bin/../lib/gcc/i686-w64-mingw32/10.2.0/../../../../i686-w64-mingw32/lib/../lib/;c:/programdata/chocolatey/lib/winlibs/tools/mingw32/bin/../lib/gcc/i686-w64-mingw32/10.2.0/../../../../lib/;c:/programdata/chocolatey/lib/winlibs/tools/mingw32/bin/../lib/gcc/i686-w64-mingw32/10.2.0/../../../../i686-w64-mingw32/lib/;c:/programdata/chocolatey/lib/winlibs/tools/mingw32/bin/../lib/gcc/i686-w64-mingw32/10.2.0/../../../
-        COLLECT_GCC_OPTIONS='-fdiagnostics-color=always' '-v' '-o' 'CMakeFiles/cmTC_df13d.dir/CMakeCCompilerABI.c.obj' '-c' '-mtune=generic' '-march=pentiumpro'
-        [2/2] cmd.exe /C "cd . && C:\\ProgramData\\chocolatey\\lib\\winlibs\\tools\\mingw32\\bin\\gcc.exe  -v CMakeFiles/cmTC_df13d.dir/CMakeCCompilerABI.c.obj -o cmTC_df13d.exe -Wl,--out-implib,libcmTC_df13d.dll.a -Wl,--major-image-version,0,--minor-image-version,0   && cd ."
+        COLLECT_GCC_OPTIONS='-fdiagnostics-color=always' '-v' '-o' 'CMakeFiles/cmTC_c654f.dir/CMakeCCompilerABI.c.obj' '-c' '-mtune=generic' '-march=pentiumpro'
+        [2/2] cmd.exe /C "cd . && C:\\ProgramData\\chocolatey\\lib\\winlibs\\tools\\mingw32\\bin\\gcc.exe  -v CMakeFiles/cmTC_c654f.dir/CMakeCCompilerABI.c.obj -o cmTC_c654f.exe -Wl,--out-implib,libcmTC_c654f.dll.a -Wl,--major-image-version,0,--minor-image-version,0   && cd ."
         Using built-in specs.
         COLLECT_GCC=C:\\ProgramData\\chocolatey\\lib\\winlibs\\tools\\mingw32\\bin\\gcc.exe
         COLLECT_LTO_WRAPPER=c:/programdata/chocolatey/lib/winlibs/tools/mingw32/bin/../libexec/gcc/i686-w64-mingw32/10.2.0/lto-wrapper.exe
@@ -124,9 +124,9 @@ events:
         gcc version 10.2.0 (MinGW-W64 i686-posix-dwarf, built by Brecht Sanders) 
         COMPILER_PATH=c:/programdata/chocolatey/lib/winlibs/tools/mingw32/bin/../libexec/gcc/i686-w64-mingw32/10.2.0/;c:/programdata/chocolatey/lib/winlibs/tools/mingw32/bin/../libexec/gcc/;c:/programdata/chocolatey/lib/winlibs/tools/mingw32/bin/../lib/gcc/i686-w64-mingw32/10.2.0/../../../../i686-w64-mingw32/bin/
         LIBRARY_PATH=c:/programdata/chocolatey/lib/winlibs/tools/mingw32/bin/../lib/gcc/i686-w64-mingw32/10.2.0/;c:/programdata/chocolatey/lib/winlibs/tools/mingw32/bin/../lib/gcc/;c:/programdata/chocolatey/lib/winlibs/tools/mingw32/bin/../lib/gcc/i686-w64-mingw32/10.2.0/../../../../i686-w64-mingw32/lib/../lib/;c:/programdata/chocolatey/lib/winlibs/tools/mingw32/bin/../lib/gcc/i686-w64-mingw32/10.2.0/../../../../lib/;c:/programdata/chocolatey/lib/winlibs/tools/mingw32/bin/../lib/gcc/i686-w64-mingw32/10.2.0/../../../../i686-w64-mingw32/lib/;c:/programdata/chocolatey/lib/winlibs/tools/mingw32/bin/../lib/gcc/i686-w64-mingw32/10.2.0/../../../
-        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_df13d.exe' '-mtune=generic' '-march=pentiumpro'
-         c:/programdata/chocolatey/lib/winlibs/tools/mingw32/bin/../libexec/gcc/i686-w64-mingw32/10.2.0/collect2.exe -plugin c:/programdata/chocolatey/lib/winlibs/tools/mingw32/bin/../libexec/gcc/i686-w64-mingw32/10.2.0/liblto_plugin-0.dll -plugin-opt=c:/programdata/chocolatey/lib/winlibs/tools/mingw32/bin/../libexec/gcc/i686-w64-mingw32/10.2.0/lto-wrapper.exe -plugin-opt=-fresolution=C:\\Users\\User\\AppData\\Local\\Temp\\ccBpAd5N.res -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_eh -plugin-opt=-pass-through=-lmoldname -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lpthread -plugin-opt=-pass-through=-ladvapi32 -plugin-opt=-pass-through=-lshell32 -plugin-opt=-pass-through=-luser32 -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_eh -plugin-opt=-pass-through=-lmoldname -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -m i386pe -Bdynamic --large-address-aware -o cmTC_df13d.exe c:/programdata/chocolatey/lib/winlibs/tools/mingw32/bin/../lib/gcc/i686-w64-mingw32/10.2.0/../../../../i686-w64-mingw32/lib/../lib/crt2.o c:/programdata/chocolatey/lib/winlibs/tools/mingw32/bin/../lib/gcc/i686-w64-mingw32/10.2.0/crtbegin.o -Lc:/programdata/chocolatey/lib/winlibs/tools/mingw32/bin/../lib/gcc/i686-w64-mingw32/10.2.0 -Lc:/programdata/chocolatey/lib/winlibs/tools/mingw32/bin/../lib/gcc -Lc:/programdata/chocolatey/lib/winlibs/tools/mingw32/bin/../lib/gcc/i686-w64-mingw32/10.2.0/../../../../i686-w64-mingw32/lib/../lib -Lc:/programdata/chocolatey/lib/winlibs/tools/mingw32/bin/../lib/gcc/i686-w64-mingw32/10.2.0/../../../../lib -Lc:/programdata/chocolatey/lib/winlibs/tools/mingw32/bin/../lib/gcc/i686-w64-mingw32/10.2.0/../../../../i686-w64-mingw32/lib -Lc:/programdata/chocolatey/lib/winlibs/tools/mingw32/bin/../lib/gcc/i686-w64-mingw32/10.2.0/../../.. CMakeFiles/cmTC_df13d.dir/CMakeCCompilerABI.c.obj --out-implib libcmTC_df13d.dll.a --major-image-version 0 --minor-image-version 0 -lmingw32 -lgcc -lgcc_eh -lmoldname -lmingwex -lmsvcrt -lpthread -ladvapi32 -lshell32 -luser32 -lkernel32 -lmingw32 -lgcc -lgcc_eh -lmoldname -lmingwex -lmsvcrt c:/programdata/chocolatey/lib/winlibs/tools/mingw32/bin/../lib/gcc/i686-w64-mingw32/10.2.0/crtend.o
-        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_df13d.exe' '-mtune=generic' '-march=pentiumpro'
+        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_c654f.exe' '-mtune=generic' '-march=pentiumpro'
+         c:/programdata/chocolatey/lib/winlibs/tools/mingw32/bin/../libexec/gcc/i686-w64-mingw32/10.2.0/collect2.exe -plugin c:/programdata/chocolatey/lib/winlibs/tools/mingw32/bin/../libexec/gcc/i686-w64-mingw32/10.2.0/liblto_plugin-0.dll -plugin-opt=c:/programdata/chocolatey/lib/winlibs/tools/mingw32/bin/../libexec/gcc/i686-w64-mingw32/10.2.0/lto-wrapper.exe -plugin-opt=-fresolution=C:\\Users\\User\\AppData\\Local\\Temp\\cchLJnzp.res -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_eh -plugin-opt=-pass-through=-lmoldname -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lpthread -plugin-opt=-pass-through=-ladvapi32 -plugin-opt=-pass-through=-lshell32 -plugin-opt=-pass-through=-luser32 -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_eh -plugin-opt=-pass-through=-lmoldname -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -m i386pe -Bdynamic --large-address-aware -o cmTC_c654f.exe c:/programdata/chocolatey/lib/winlibs/tools/mingw32/bin/../lib/gcc/i686-w64-mingw32/10.2.0/../../../../i686-w64-mingw32/lib/../lib/crt2.o c:/programdata/chocolatey/lib/winlibs/tools/mingw32/bin/../lib/gcc/i686-w64-mingw32/10.2.0/crtbegin.o -Lc:/programdata/chocolatey/lib/winlibs/tools/mingw32/bin/../lib/gcc/i686-w64-mingw32/10.2.0 -Lc:/programdata/chocolatey/lib/winlibs/tools/mingw32/bin/../lib/gcc -Lc:/programdata/chocolatey/lib/winlibs/tools/mingw32/bin/../lib/gcc/i686-w64-mingw32/10.2.0/../../../../i686-w64-mingw32/lib/../lib -Lc:/programdata/chocolatey/lib/winlibs/tools/mingw32/bin/../lib/gcc/i686-w64-mingw32/10.2.0/../../../../lib -Lc:/programdata/chocolatey/lib/winlibs/tools/mingw32/bin/../lib/gcc/i686-w64-mingw32/10.2.0/../../../../i686-w64-mingw32/lib -Lc:/programdata/chocolatey/lib/winlibs/tools/mingw32/bin/../lib/gcc/i686-w64-mingw32/10.2.0/../../.. CMakeFiles/cmTC_c654f.dir/CMakeCCompilerABI.c.obj --out-implib libcmTC_c654f.dll.a --major-image-version 0 --minor-image-version 0 -lmingw32 -lgcc -lgcc_eh -lmoldname -lmingwex -lmsvcrt -lpthread -ladvapi32 -lshell32 -luser32 -lkernel32 -lmingw32 -lgcc -lgcc_eh -lmoldname -lmingwex -lmsvcrt c:/programdata/chocolatey/lib/winlibs/tools/mingw32/bin/../lib/gcc/i686-w64-mingw32/10.2.0/crtend.o
+        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_c654f.exe' '-mtune=generic' '-march=pentiumpro'
         
       exitCode: 0
   -
@@ -160,9 +160,9 @@ events:
     message: |
       Parsed C implicit link information:
         link line regex: [^( *|.*[/\\])(ld\\.exe|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
-        ignore line: [Change Dir: C:/Users/User/CLionProjects/CourseProject/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-n0nv10]
+        ignore line: [Change Dir: C:/Users/User/CLionProjects/CourseProject/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-z3gnlc]
         ignore line: []
-        ignore line: [Run Build Command(s):C:/Program Files/JetBrains/CLion 2023.2.2/bin/ninja/win/x64/ninja.exe -v cmTC_df13d && [1/2] C:\\ProgramData\\chocolatey\\lib\\winlibs\\tools\\mingw32\\bin\\gcc.exe   -fdiagnostics-color=always   -v -o CMakeFiles/cmTC_df13d.dir/CMakeCCompilerABI.c.obj -c "C:/Program Files/JetBrains/CLion 2023.2.2/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakeCCompilerABI.c"]
+        ignore line: [Run Build Command(s):C:/Program Files/JetBrains/CLion 2023.2.2/bin/ninja/win/x64/ninja.exe -v cmTC_c654f && [1/2] C:\\ProgramData\\chocolatey\\lib\\winlibs\\tools\\mingw32\\bin\\gcc.exe   -fdiagnostics-color=always   -v -o CMakeFiles/cmTC_c654f.dir/CMakeCCompilerABI.c.obj -c "C:/Program Files/JetBrains/CLion 2023.2.2/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakeCCompilerABI.c"]
         ignore line: [Using built-in specs.]
         ignore line: [COLLECT_GCC=C:\\ProgramData\\chocolatey\\lib\\winlibs\\tools\\mingw32\\bin\\gcc.exe]
         ignore line: [OFFLOAD_TARGET_NAMES=nvptx-none]
@@ -171,8 +171,8 @@ events:
         ignore line: [Thread model: posix]
         ignore line: [Supported LTO compression algorithms: zlib zstd]
         ignore line: [gcc version 10.2.0 (MinGW-W64 i686-posix-dwarf  built by Brecht Sanders) ]
-        ignore line: [COLLECT_GCC_OPTIONS='-fdiagnostics-color=always' '-v' '-o' 'CMakeFiles/cmTC_df13d.dir/CMakeCCompilerABI.c.obj' '-c' '-mtune=generic' '-march=pentiumpro']
-        ignore line: [ c:/programdata/chocolatey/lib/winlibs/tools/mingw32/bin/../libexec/gcc/i686-w64-mingw32/10.2.0/cc1.exe -quiet -v -iprefix c:\\programdata\\chocolatey\\lib\\winlibs\\tools\\mingw32\\bin\\../lib/gcc/i686-w64-mingw32/10.2.0/ -D_REENTRANT C:/Program Files/JetBrains/CLion 2023.2.2/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakeCCompilerABI.c -quiet -dumpbase CMakeCCompilerABI.c -mtune=generic -march=pentiumpro -auxbase-strip CMakeFiles/cmTC_df13d.dir/CMakeCCompilerABI.c.obj -version -fdiagnostics-color=always -o C:\\Users\\User\\AppData\\Local\\Temp\\ccfm2P2H.s]
+        ignore line: [COLLECT_GCC_OPTIONS='-fdiagnostics-color=always' '-v' '-o' 'CMakeFiles/cmTC_c654f.dir/CMakeCCompilerABI.c.obj' '-c' '-mtune=generic' '-march=pentiumpro']
+        ignore line: [ c:/programdata/chocolatey/lib/winlibs/tools/mingw32/bin/../libexec/gcc/i686-w64-mingw32/10.2.0/cc1.exe -quiet -v -iprefix c:\\programdata\\chocolatey\\lib\\winlibs\\tools\\mingw32\\bin\\../lib/gcc/i686-w64-mingw32/10.2.0/ -D_REENTRANT C:/Program Files/JetBrains/CLion 2023.2.2/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakeCCompilerABI.c -quiet -dumpbase CMakeCCompilerABI.c -mtune=generic -march=pentiumpro -auxbase-strip CMakeFiles/cmTC_c654f.dir/CMakeCCompilerABI.c.obj -version -fdiagnostics-color=always -o C:\\Users\\User\\AppData\\Local\\Temp\\ccvOeaai.s]
         ignore line: [GNU C17 (MinGW-W64 i686-posix-dwarf  built by Brecht Sanders) version 10.2.0 (i686-w64-mingw32)]
         ignore line: [	compiled by GNU C version 10.2.0  GMP version 6.2.1  MPFR version 4.1.0  MPC version 1.2.1  isl version isl-0.23-GMP]
         ignore line: []
@@ -195,8 +195,8 @@ events:
         ignore line: []
         ignore line: [GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072]
         ignore line: [Compiler executable checksum: deb3e28699c90a9be4a1bd728059bc78]
-        ignore line: [COLLECT_GCC_OPTIONS='-fdiagnostics-color=always' '-v' '-o' 'CMakeFiles/cmTC_df13d.dir/CMakeCCompilerABI.c.obj' '-c' '-mtune=generic' '-march=pentiumpro']
-        ignore line: [ c:/programdata/chocolatey/lib/winlibs/tools/mingw32/bin/../lib/gcc/i686-w64-mingw32/10.2.0/../../../../i686-w64-mingw32/bin/as.exe -v -o CMakeFiles/cmTC_df13d.dir/CMakeCCompilerABI.c.obj C:\\Users\\User\\AppData\\Local\\Temp\\ccfm2P2H.s]
+        ignore line: [COLLECT_GCC_OPTIONS='-fdiagnostics-color=always' '-v' '-o' 'CMakeFiles/cmTC_c654f.dir/CMakeCCompilerABI.c.obj' '-c' '-mtune=generic' '-march=pentiumpro']
+        ignore line: [ c:/programdata/chocolatey/lib/winlibs/tools/mingw32/bin/../lib/gcc/i686-w64-mingw32/10.2.0/../../../../i686-w64-mingw32/bin/as.exe -v -o CMakeFiles/cmTC_c654f.dir/CMakeCCompilerABI.c.obj C:\\Users\\User\\AppData\\Local\\Temp\\ccvOeaai.s]
         ignore line: [GNU assembler version 2.36.1 (i686-w64-mingw32) using BFD version (Binutils for MinGW-W64 i686  built by Brecht Sanders) 2.36.1]
         ignore line: [COMPILER_PATH=c:/programdata/chocolatey/lib/winlibs/tools/mingw32/bin/../libexec/gcc/i686-w64-mingw32/10.2.0/]
         ignore line: [c:/programdata/chocolatey/lib/winlibs/tools/mingw32/bin/../libexec/gcc/]
@@ -207,8 +207,8 @@ events:
         ignore line: [c:/programdata/chocolatey/lib/winlibs/tools/mingw32/bin/../lib/gcc/i686-w64-mingw32/10.2.0/../../../../lib/]
         ignore line: [c:/programdata/chocolatey/lib/winlibs/tools/mingw32/bin/../lib/gcc/i686-w64-mingw32/10.2.0/../../../../i686-w64-mingw32/lib/]
         ignore line: [c:/programdata/chocolatey/lib/winlibs/tools/mingw32/bin/../lib/gcc/i686-w64-mingw32/10.2.0/../../../]
-        ignore line: [COLLECT_GCC_OPTIONS='-fdiagnostics-color=always' '-v' '-o' 'CMakeFiles/cmTC_df13d.dir/CMakeCCompilerABI.c.obj' '-c' '-mtune=generic' '-march=pentiumpro']
-        ignore line: [[2/2] cmd.exe /C "cd . && C:\\ProgramData\\chocolatey\\lib\\winlibs\\tools\\mingw32\\bin\\gcc.exe  -v CMakeFiles/cmTC_df13d.dir/CMakeCCompilerABI.c.obj -o cmTC_df13d.exe -Wl --out-implib libcmTC_df13d.dll.a -Wl --major-image-version 0 --minor-image-version 0   && cd ."]
+        ignore line: [COLLECT_GCC_OPTIONS='-fdiagnostics-color=always' '-v' '-o' 'CMakeFiles/cmTC_c654f.dir/CMakeCCompilerABI.c.obj' '-c' '-mtune=generic' '-march=pentiumpro']
+        ignore line: [[2/2] cmd.exe /C "cd . && C:\\ProgramData\\chocolatey\\lib\\winlibs\\tools\\mingw32\\bin\\gcc.exe  -v CMakeFiles/cmTC_c654f.dir/CMakeCCompilerABI.c.obj -o cmTC_c654f.exe -Wl --out-implib libcmTC_c654f.dll.a -Wl --major-image-version 0 --minor-image-version 0   && cd ."]
         ignore line: [Using built-in specs.]
         ignore line: [COLLECT_GCC=C:\\ProgramData\\chocolatey\\lib\\winlibs\\tools\\mingw32\\bin\\gcc.exe]
         ignore line: [COLLECT_LTO_WRAPPER=c:/programdata/chocolatey/lib/winlibs/tools/mingw32/bin/../libexec/gcc/i686-w64-mingw32/10.2.0/lto-wrapper.exe]
@@ -227,13 +227,13 @@ events:
         ignore line: [c:/programdata/chocolatey/lib/winlibs/tools/mingw32/bin/../lib/gcc/i686-w64-mingw32/10.2.0/../../../../lib/]
         ignore line: [c:/programdata/chocolatey/lib/winlibs/tools/mingw32/bin/../lib/gcc/i686-w64-mingw32/10.2.0/../../../../i686-w64-mingw32/lib/]
         ignore line: [c:/programdata/chocolatey/lib/winlibs/tools/mingw32/bin/../lib/gcc/i686-w64-mingw32/10.2.0/../../../]
-        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_df13d.exe' '-mtune=generic' '-march=pentiumpro']
-        link line: [ c:/programdata/chocolatey/lib/winlibs/tools/mingw32/bin/../libexec/gcc/i686-w64-mingw32/10.2.0/collect2.exe -plugin c:/programdata/chocolatey/lib/winlibs/tools/mingw32/bin/../libexec/gcc/i686-w64-mingw32/10.2.0/liblto_plugin-0.dll -plugin-opt=c:/programdata/chocolatey/lib/winlibs/tools/mingw32/bin/../libexec/gcc/i686-w64-mingw32/10.2.0/lto-wrapper.exe -plugin-opt=-fresolution=C:\\Users\\User\\AppData\\Local\\Temp\\ccBpAd5N.res -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_eh -plugin-opt=-pass-through=-lmoldname -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lpthread -plugin-opt=-pass-through=-ladvapi32 -plugin-opt=-pass-through=-lshell32 -plugin-opt=-pass-through=-luser32 -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_eh -plugin-opt=-pass-through=-lmoldname -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -m i386pe -Bdynamic --large-address-aware -o cmTC_df13d.exe c:/programdata/chocolatey/lib/winlibs/tools/mingw32/bin/../lib/gcc/i686-w64-mingw32/10.2.0/../../../../i686-w64-mingw32/lib/../lib/crt2.o c:/programdata/chocolatey/lib/winlibs/tools/mingw32/bin/../lib/gcc/i686-w64-mingw32/10.2.0/crtbegin.o -Lc:/programdata/chocolatey/lib/winlibs/tools/mingw32/bin/../lib/gcc/i686-w64-mingw32/10.2.0 -Lc:/programdata/chocolatey/lib/winlibs/tools/mingw32/bin/../lib/gcc -Lc:/programdata/chocolatey/lib/winlibs/tools/mingw32/bin/../lib/gcc/i686-w64-mingw32/10.2.0/../../../../i686-w64-mingw32/lib/../lib -Lc:/programdata/chocolatey/lib/winlibs/tools/mingw32/bin/../lib/gcc/i686-w64-mingw32/10.2.0/../../../../lib -Lc:/programdata/chocolatey/lib/winlibs/tools/mingw32/bin/../lib/gcc/i686-w64-mingw32/10.2.0/../../../../i686-w64-mingw32/lib -Lc:/programdata/chocolatey/lib/winlibs/tools/mingw32/bin/../lib/gcc/i686-w64-mingw32/10.2.0/../../.. CMakeFiles/cmTC_df13d.dir/CMakeCCompilerABI.c.obj --out-implib libcmTC_df13d.dll.a --major-image-version 0 --minor-image-version 0 -lmingw32 -lgcc -lgcc_eh -lmoldname -lmingwex -lmsvcrt -lpthread -ladvapi32 -lshell32 -luser32 -lkernel32 -lmingw32 -lgcc -lgcc_eh -lmoldname -lmingwex -lmsvcrt c:/programdata/chocolatey/lib/winlibs/tools/mingw32/bin/../lib/gcc/i686-w64-mingw32/10.2.0/crtend.o]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_c654f.exe' '-mtune=generic' '-march=pentiumpro']
+        link line: [ c:/programdata/chocolatey/lib/winlibs/tools/mingw32/bin/../libexec/gcc/i686-w64-mingw32/10.2.0/collect2.exe -plugin c:/programdata/chocolatey/lib/winlibs/tools/mingw32/bin/../libexec/gcc/i686-w64-mingw32/10.2.0/liblto_plugin-0.dll -plugin-opt=c:/programdata/chocolatey/lib/winlibs/tools/mingw32/bin/../libexec/gcc/i686-w64-mingw32/10.2.0/lto-wrapper.exe -plugin-opt=-fresolution=C:\\Users\\User\\AppData\\Local\\Temp\\cchLJnzp.res -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_eh -plugin-opt=-pass-through=-lmoldname -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lpthread -plugin-opt=-pass-through=-ladvapi32 -plugin-opt=-pass-through=-lshell32 -plugin-opt=-pass-through=-luser32 -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_eh -plugin-opt=-pass-through=-lmoldname -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -m i386pe -Bdynamic --large-address-aware -o cmTC_c654f.exe c:/programdata/chocolatey/lib/winlibs/tools/mingw32/bin/../lib/gcc/i686-w64-mingw32/10.2.0/../../../../i686-w64-mingw32/lib/../lib/crt2.o c:/programdata/chocolatey/lib/winlibs/tools/mingw32/bin/../lib/gcc/i686-w64-mingw32/10.2.0/crtbegin.o -Lc:/programdata/chocolatey/lib/winlibs/tools/mingw32/bin/../lib/gcc/i686-w64-mingw32/10.2.0 -Lc:/programdata/chocolatey/lib/winlibs/tools/mingw32/bin/../lib/gcc -Lc:/programdata/chocolatey/lib/winlibs/tools/mingw32/bin/../lib/gcc/i686-w64-mingw32/10.2.0/../../../../i686-w64-mingw32/lib/../lib -Lc:/programdata/chocolatey/lib/winlibs/tools/mingw32/bin/../lib/gcc/i686-w64-mingw32/10.2.0/../../../../lib -Lc:/programdata/chocolatey/lib/winlibs/tools/mingw32/bin/../lib/gcc/i686-w64-mingw32/10.2.0/../../../../i686-w64-mingw32/lib -Lc:/programdata/chocolatey/lib/winlibs/tools/mingw32/bin/../lib/gcc/i686-w64-mingw32/10.2.0/../../.. CMakeFiles/cmTC_c654f.dir/CMakeCCompilerABI.c.obj --out-implib libcmTC_c654f.dll.a --major-image-version 0 --minor-image-version 0 -lmingw32 -lgcc -lgcc_eh -lmoldname -lmingwex -lmsvcrt -lpthread -ladvapi32 -lshell32 -luser32 -lkernel32 -lmingw32 -lgcc -lgcc_eh -lmoldname -lmingwex -lmsvcrt c:/programdata/chocolatey/lib/winlibs/tools/mingw32/bin/../lib/gcc/i686-w64-mingw32/10.2.0/crtend.o]
           arg [c:/programdata/chocolatey/lib/winlibs/tools/mingw32/bin/../libexec/gcc/i686-w64-mingw32/10.2.0/collect2.exe] ==> ignore
           arg [-plugin] ==> ignore
           arg [c:/programdata/chocolatey/lib/winlibs/tools/mingw32/bin/../libexec/gcc/i686-w64-mingw32/10.2.0/liblto_plugin-0.dll] ==> ignore
           arg [-plugin-opt=c:/programdata/chocolatey/lib/winlibs/tools/mingw32/bin/../libexec/gcc/i686-w64-mingw32/10.2.0/lto-wrapper.exe] ==> ignore
-          arg [-plugin-opt=-fresolution=C:\\Users\\User\\AppData\\Local\\Temp\\ccBpAd5N.res] ==> ignore
+          arg [-plugin-opt=-fresolution=C:\\Users\\User\\AppData\\Local\\Temp\\cchLJnzp.res] ==> ignore
           arg [-plugin-opt=-pass-through=-lmingw32] ==> ignore
           arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
           arg [-plugin-opt=-pass-through=-lgcc_eh] ==> ignore
@@ -256,7 +256,7 @@ events:
           arg [-Bdynamic] ==> search dynamic
           arg [--large-address-aware] ==> ignore
           arg [-o] ==> ignore
-          arg [cmTC_df13d.exe] ==> ignore
+          arg [cmTC_c654f.exe] ==> ignore
           arg [c:/programdata/chocolatey/lib/winlibs/tools/mingw32/bin/../lib/gcc/i686-w64-mingw32/10.2.0/../../../../i686-w64-mingw32/lib/../lib/crt2.o] ==> obj [c:/programdata/chocolatey/lib/winlibs/tools/mingw32/bin/../lib/gcc/i686-w64-mingw32/10.2.0/../../../../i686-w64-mingw32/lib/../lib/crt2.o]
           arg [c:/programdata/chocolatey/lib/winlibs/tools/mingw32/bin/../lib/gcc/i686-w64-mingw32/10.2.0/crtbegin.o] ==> obj [c:/programdata/chocolatey/lib/winlibs/tools/mingw32/bin/../lib/gcc/i686-w64-mingw32/10.2.0/crtbegin.o]
           arg [-Lc:/programdata/chocolatey/lib/winlibs/tools/mingw32/bin/../lib/gcc/i686-w64-mingw32/10.2.0] ==> dir [c:/programdata/chocolatey/lib/winlibs/tools/mingw32/bin/../lib/gcc/i686-w64-mingw32/10.2.0]
@@ -265,9 +265,9 @@ events:
           arg [-Lc:/programdata/chocolatey/lib/winlibs/tools/mingw32/bin/../lib/gcc/i686-w64-mingw32/10.2.0/../../../../lib] ==> dir [c:/programdata/chocolatey/lib/winlibs/tools/mingw32/bin/../lib/gcc/i686-w64-mingw32/10.2.0/../../../../lib]
           arg [-Lc:/programdata/chocolatey/lib/winlibs/tools/mingw32/bin/../lib/gcc/i686-w64-mingw32/10.2.0/../../../../i686-w64-mingw32/lib] ==> dir [c:/programdata/chocolatey/lib/winlibs/tools/mingw32/bin/../lib/gcc/i686-w64-mingw32/10.2.0/../../../../i686-w64-mingw32/lib]
           arg [-Lc:/programdata/chocolatey/lib/winlibs/tools/mingw32/bin/../lib/gcc/i686-w64-mingw32/10.2.0/../../..] ==> dir [c:/programdata/chocolatey/lib/winlibs/tools/mingw32/bin/../lib/gcc/i686-w64-mingw32/10.2.0/../../..]
-          arg [CMakeFiles/cmTC_df13d.dir/CMakeCCompilerABI.c.obj] ==> ignore
+          arg [CMakeFiles/cmTC_c654f.dir/CMakeCCompilerABI.c.obj] ==> ignore
           arg [--out-implib] ==> ignore
-          arg [libcmTC_df13d.dll.a] ==> ignore
+          arg [libcmTC_c654f.dll.a] ==> ignore
           arg [--major-image-version] ==> ignore
           arg [0] ==> ignore
           arg [--minor-image-version] ==> ignore
@@ -318,8 +318,8 @@ events:
     checks:
       - "Detecting CXX compiler ABI info"
     directories:
-      source: "C:/Users/User/CLionProjects/CourseProject/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-oys6bx"
-      binary: "C:/Users/User/CLionProjects/CourseProject/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-oys6bx"
+      source: "C:/Users/User/CLionProjects/CourseProject/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-iedpir"
+      binary: "C:/Users/User/CLionProjects/CourseProject/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-iedpir"
     cmakeVariables:
       CMAKE_CXX_FLAGS: ""
       CMAKE_CXX_FLAGS_DEBUG: "-g"
@@ -328,9 +328,9 @@ events:
       variable: "CMAKE_CXX_ABI_COMPILED"
       cached: true
       stdout: |
-        Change Dir: C:/Users/User/CLionProjects/CourseProject/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-oys6bx
+        Change Dir: C:/Users/User/CLionProjects/CourseProject/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-iedpir
         
-        Run Build Command(s):C:/Program Files/JetBrains/CLion 2023.2.2/bin/ninja/win/x64/ninja.exe -v cmTC_3efc8 && [1/2] C:\\ProgramData\\chocolatey\\lib\\winlibs\\tools\\mingw32\\bin\\c++.exe   -fdiagnostics-color=always   -v -o CMakeFiles/cmTC_3efc8.dir/CMakeCXXCompilerABI.cpp.obj -c "C:/Program Files/JetBrains/CLion 2023.2.2/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakeCXXCompilerABI.cpp"
+        Run Build Command(s):C:/Program Files/JetBrains/CLion 2023.2.2/bin/ninja/win/x64/ninja.exe -v cmTC_fc768 && [1/2] C:\\ProgramData\\chocolatey\\lib\\winlibs\\tools\\mingw32\\bin\\c++.exe   -fdiagnostics-color=always   -v -o CMakeFiles/cmTC_fc768.dir/CMakeCXXCompilerABI.cpp.obj -c "C:/Program Files/JetBrains/CLion 2023.2.2/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakeCXXCompilerABI.cpp"
         Using built-in specs.
         COLLECT_GCC=C:\\ProgramData\\chocolatey\\lib\\winlibs\\tools\\mingw32\\bin\\c++.exe
         OFFLOAD_TARGET_NAMES=nvptx-none
@@ -339,8 +339,8 @@ events:
         Thread model: posix
         Supported LTO compression algorithms: zlib zstd
         gcc version 10.2.0 (MinGW-W64 i686-posix-dwarf, built by Brecht Sanders) 
-        COLLECT_GCC_OPTIONS='-fdiagnostics-color=always' '-v' '-o' 'CMakeFiles/cmTC_3efc8.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-shared-libgcc' '-mtune=generic' '-march=pentiumpro'
-         c:/programdata/chocolatey/lib/winlibs/tools/mingw32/bin/../libexec/gcc/i686-w64-mingw32/10.2.0/cc1plus.exe -quiet -v -iprefix c:\\programdata\\chocolatey\\lib\\winlibs\\tools\\mingw32\\bin\\../lib/gcc/i686-w64-mingw32/10.2.0/ -D_REENTRANT C:/Program Files/JetBrains/CLion 2023.2.2/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakeCXXCompilerABI.cpp -quiet -dumpbase CMakeCXXCompilerABI.cpp -mtune=generic -march=pentiumpro -auxbase-strip CMakeFiles/cmTC_3efc8.dir/CMakeCXXCompilerABI.cpp.obj -version -fdiagnostics-color=always -o C:\\Users\\User\\AppData\\Local\\Temp\\cc37Wtvh.s
+        COLLECT_GCC_OPTIONS='-fdiagnostics-color=always' '-v' '-o' 'CMakeFiles/cmTC_fc768.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-shared-libgcc' '-mtune=generic' '-march=pentiumpro'
+         c:/programdata/chocolatey/lib/winlibs/tools/mingw32/bin/../libexec/gcc/i686-w64-mingw32/10.2.0/cc1plus.exe -quiet -v -iprefix c:\\programdata\\chocolatey\\lib\\winlibs\\tools\\mingw32\\bin\\../lib/gcc/i686-w64-mingw32/10.2.0/ -D_REENTRANT C:/Program Files/JetBrains/CLion 2023.2.2/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakeCXXCompilerABI.cpp -quiet -dumpbase CMakeCXXCompilerABI.cpp -mtune=generic -march=pentiumpro -auxbase-strip CMakeFiles/cmTC_fc768.dir/CMakeCXXCompilerABI.cpp.obj -version -fdiagnostics-color=always -o C:\\Users\\User\\AppData\\Local\\Temp\\ccLQ8jPP.s
         GNU C++14 (MinGW-W64 i686-posix-dwarf, built by Brecht Sanders) version 10.2.0 (i686-w64-mingw32)
         	compiled by GNU C version 10.2.0, GMP version 6.2.1, MPFR version 4.1.0, MPC version 1.2.1, isl version isl-0.23-GMP
         
@@ -369,13 +369,13 @@ events:
         
         GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
         Compiler executable checksum: 02610aa86149cc2ae8d4f1ff78a3161a
-        COLLECT_GCC_OPTIONS='-fdiagnostics-color=always' '-v' '-o' 'CMakeFiles/cmTC_3efc8.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-shared-libgcc' '-mtune=generic' '-march=pentiumpro'
-         c:/programdata/chocolatey/lib/winlibs/tools/mingw32/bin/../lib/gcc/i686-w64-mingw32/10.2.0/../../../../i686-w64-mingw32/bin/as.exe -v -o CMakeFiles/cmTC_3efc8.dir/CMakeCXXCompilerABI.cpp.obj C:\\Users\\User\\AppData\\Local\\Temp\\cc37Wtvh.s
+        COLLECT_GCC_OPTIONS='-fdiagnostics-color=always' '-v' '-o' 'CMakeFiles/cmTC_fc768.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-shared-libgcc' '-mtune=generic' '-march=pentiumpro'
+         c:/programdata/chocolatey/lib/winlibs/tools/mingw32/bin/../lib/gcc/i686-w64-mingw32/10.2.0/../../../../i686-w64-mingw32/bin/as.exe -v -o CMakeFiles/cmTC_fc768.dir/CMakeCXXCompilerABI.cpp.obj C:\\Users\\User\\AppData\\Local\\Temp\\ccLQ8jPP.s
         GNU assembler version 2.36.1 (i686-w64-mingw32) using BFD version (Binutils for MinGW-W64 i686, built by Brecht Sanders) 2.36.1
         COMPILER_PATH=c:/programdata/chocolatey/lib/winlibs/tools/mingw32/bin/../libexec/gcc/i686-w64-mingw32/10.2.0/;c:/programdata/chocolatey/lib/winlibs/tools/mingw32/bin/../libexec/gcc/;c:/programdata/chocolatey/lib/winlibs/tools/mingw32/bin/../lib/gcc/i686-w64-mingw32/10.2.0/../../../../i686-w64-mingw32/bin/
         LIBRARY_PATH=c:/programdata/chocolatey/lib/winlibs/tools/mingw32/bin/../lib/gcc/i686-w64-mingw32/10.2.0/;c:/programdata/chocolatey/lib/winlibs/tools/mingw32/bin/../lib/gcc/;c:/programdata/chocolatey/lib/winlibs/tools/mingw32/bin/../lib/gcc/i686-w64-mingw32/10.2.0/../../../../i686-w64-mingw32/lib/../lib/;c:/programdata/chocolatey/lib/winlibs/tools/mingw32/bin/../lib/gcc/i686-w64-mingw32/10.2.0/../../../../lib/;c:/programdata/chocolatey/lib/winlibs/tools/mingw32/bin/../lib/gcc/i686-w64-mingw32/10.2.0/../../../../i686-w64-mingw32/lib/;c:/programdata/chocolatey/lib/winlibs/tools/mingw32/bin/../lib/gcc/i686-w64-mingw32/10.2.0/../../../
-        COLLECT_GCC_OPTIONS='-fdiagnostics-color=always' '-v' '-o' 'CMakeFiles/cmTC_3efc8.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-shared-libgcc' '-mtune=generic' '-march=pentiumpro'
-        [2/2] cmd.exe /C "cd . && C:\\ProgramData\\chocolatey\\lib\\winlibs\\tools\\mingw32\\bin\\c++.exe  -v CMakeFiles/cmTC_3efc8.dir/CMakeCXXCompilerABI.cpp.obj -o cmTC_3efc8.exe -Wl,--out-implib,libcmTC_3efc8.dll.a -Wl,--major-image-version,0,--minor-image-version,0   && cd ."
+        COLLECT_GCC_OPTIONS='-fdiagnostics-color=always' '-v' '-o' 'CMakeFiles/cmTC_fc768.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-shared-libgcc' '-mtune=generic' '-march=pentiumpro'
+        [2/2] cmd.exe /C "cd . && C:\\ProgramData\\chocolatey\\lib\\winlibs\\tools\\mingw32\\bin\\c++.exe  -v CMakeFiles/cmTC_fc768.dir/CMakeCXXCompilerABI.cpp.obj -o cmTC_fc768.exe -Wl,--out-implib,libcmTC_fc768.dll.a -Wl,--major-image-version,0,--minor-image-version,0   && cd ."
         Using built-in specs.
         COLLECT_GCC=C:\\ProgramData\\chocolatey\\lib\\winlibs\\tools\\mingw32\\bin\\c++.exe
         COLLECT_LTO_WRAPPER=c:/programdata/chocolatey/lib/winlibs/tools/mingw32/bin/../libexec/gcc/i686-w64-mingw32/10.2.0/lto-wrapper.exe
@@ -387,9 +387,9 @@ events:
         gcc version 10.2.0 (MinGW-W64 i686-posix-dwarf, built by Brecht Sanders) 
         COMPILER_PATH=c:/programdata/chocolatey/lib/winlibs/tools/mingw32/bin/../libexec/gcc/i686-w64-mingw32/10.2.0/;c:/programdata/chocolatey/lib/winlibs/tools/mingw32/bin/../libexec/gcc/;c:/programdata/chocolatey/lib/winlibs/tools/mingw32/bin/../lib/gcc/i686-w64-mingw32/10.2.0/../../../../i686-w64-mingw32/bin/
         LIBRARY_PATH=c:/programdata/chocolatey/lib/winlibs/tools/mingw32/bin/../lib/gcc/i686-w64-mingw32/10.2.0/;c:/programdata/chocolatey/lib/winlibs/tools/mingw32/bin/../lib/gcc/;c:/programdata/chocolatey/lib/winlibs/tools/mingw32/bin/../lib/gcc/i686-w64-mingw32/10.2.0/../../../../i686-w64-mingw32/lib/../lib/;c:/programdata/chocolatey/lib/winlibs/tools/mingw32/bin/../lib/gcc/i686-w64-mingw32/10.2.0/../../../../lib/;c:/programdata/chocolatey/lib/winlibs/tools/mingw32/bin/../lib/gcc/i686-w64-mingw32/10.2.0/../../../../i686-w64-mingw32/lib/;c:/programdata/chocolatey/lib/winlibs/tools/mingw32/bin/../lib/gcc/i686-w64-mingw32/10.2.0/../../../
-        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_3efc8.exe' '-shared-libgcc' '-mtune=generic' '-march=pentiumpro'
-         c:/programdata/chocolatey/lib/winlibs/tools/mingw32/bin/../libexec/gcc/i686-w64-mingw32/10.2.0/collect2.exe -plugin c:/programdata/chocolatey/lib/winlibs/tools/mingw32/bin/../libexec/gcc/i686-w64-mingw32/10.2.0/liblto_plugin-0.dll -plugin-opt=c:/programdata/chocolatey/lib/winlibs/tools/mingw32/bin/../libexec/gcc/i686-w64-mingw32/10.2.0/lto-wrapper.exe -plugin-opt=-fresolution=C:\\Users\\User\\AppData\\Local\\Temp\\ccUAnffe.res -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lmoldname -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lpthread -plugin-opt=-pass-through=-ladvapi32 -plugin-opt=-pass-through=-lshell32 -plugin-opt=-pass-through=-luser32 -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lmoldname -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -m i386pe -Bdynamic --large-address-aware -u ___register_frame_info -u ___deregister_frame_info -o cmTC_3efc8.exe c:/programdata/chocolatey/lib/winlibs/tools/mingw32/bin/../lib/gcc/i686-w64-mingw32/10.2.0/../../../../i686-w64-mingw32/lib/../lib/crt2.o c:/programdata/chocolatey/lib/winlibs/tools/mingw32/bin/../lib/gcc/i686-w64-mingw32/10.2.0/crtbegin.o -Lc:/programdata/chocolatey/lib/winlibs/tools/mingw32/bin/../lib/gcc/i686-w64-mingw32/10.2.0 -Lc:/programdata/chocolatey/lib/winlibs/tools/mingw32/bin/../lib/gcc -Lc:/programdata/chocolatey/lib/winlibs/tools/mingw32/bin/../lib/gcc/i686-w64-mingw32/10.2.0/../../../../i686-w64-mingw32/lib/../lib -Lc:/programdata/chocolatey/lib/winlibs/tools/mingw32/bin/../lib/gcc/i686-w64-mingw32/10.2.0/../../../../lib -Lc:/programdata/chocolatey/lib/winlibs/tools/mingw32/bin/../lib/gcc/i686-w64-mingw32/10.2.0/../../../../i686-w64-mingw32/lib -Lc:/programdata/chocolatey/lib/winlibs/tools/mingw32/bin/../lib/gcc/i686-w64-mingw32/10.2.0/../../.. CMakeFiles/cmTC_3efc8.dir/CMakeCXXCompilerABI.cpp.obj --out-implib libcmTC_3efc8.dll.a --major-image-version 0 --minor-image-version 0 -lstdc++ -lmingw32 -lgcc_s -lgcc -lmoldname -lmingwex -lmsvcrt -lpthread -ladvapi32 -lshell32 -luser32 -lkernel32 -lmingw32 -lgcc_s -lgcc -lmoldname -lmingwex -lmsvcrt c:/programdata/chocolatey/lib/winlibs/tools/mingw32/bin/../lib/gcc/i686-w64-mingw32/10.2.0/crtend.o
-        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_3efc8.exe' '-shared-libgcc' '-mtune=generic' '-march=pentiumpro'
+        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_fc768.exe' '-shared-libgcc' '-mtune=generic' '-march=pentiumpro'
+         c:/programdata/chocolatey/lib/winlibs/tools/mingw32/bin/../libexec/gcc/i686-w64-mingw32/10.2.0/collect2.exe -plugin c:/programdata/chocolatey/lib/winlibs/tools/mingw32/bin/../libexec/gcc/i686-w64-mingw32/10.2.0/liblto_plugin-0.dll -plugin-opt=c:/programdata/chocolatey/lib/winlibs/tools/mingw32/bin/../libexec/gcc/i686-w64-mingw32/10.2.0/lto-wrapper.exe -plugin-opt=-fresolution=C:\\Users\\User\\AppData\\Local\\Temp\\ccTcwVDT.res -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lmoldname -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lpthread -plugin-opt=-pass-through=-ladvapi32 -plugin-opt=-pass-through=-lshell32 -plugin-opt=-pass-through=-luser32 -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lmoldname -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -m i386pe -Bdynamic --large-address-aware -u ___register_frame_info -u ___deregister_frame_info -o cmTC_fc768.exe c:/programdata/chocolatey/lib/winlibs/tools/mingw32/bin/../lib/gcc/i686-w64-mingw32/10.2.0/../../../../i686-w64-mingw32/lib/../lib/crt2.o c:/programdata/chocolatey/lib/winlibs/tools/mingw32/bin/../lib/gcc/i686-w64-mingw32/10.2.0/crtbegin.o -Lc:/programdata/chocolatey/lib/winlibs/tools/mingw32/bin/../lib/gcc/i686-w64-mingw32/10.2.0 -Lc:/programdata/chocolatey/lib/winlibs/tools/mingw32/bin/../lib/gcc -Lc:/programdata/chocolatey/lib/winlibs/tools/mingw32/bin/../lib/gcc/i686-w64-mingw32/10.2.0/../../../../i686-w64-mingw32/lib/../lib -Lc:/programdata/chocolatey/lib/winlibs/tools/mingw32/bin/../lib/gcc/i686-w64-mingw32/10.2.0/../../../../lib -Lc:/programdata/chocolatey/lib/winlibs/tools/mingw32/bin/../lib/gcc/i686-w64-mingw32/10.2.0/../../../../i686-w64-mingw32/lib -Lc:/programdata/chocolatey/lib/winlibs/tools/mingw32/bin/../lib/gcc/i686-w64-mingw32/10.2.0/../../.. CMakeFiles/cmTC_fc768.dir/CMakeCXXCompilerABI.cpp.obj --out-implib libcmTC_fc768.dll.a --major-image-version 0 --minor-image-version 0 -lstdc++ -lmingw32 -lgcc_s -lgcc -lmoldname -lmingwex -lmsvcrt -lpthread -ladvapi32 -lshell32 -luser32 -lkernel32 -lmingw32 -lgcc_s -lgcc -lmoldname -lmingwex -lmsvcrt c:/programdata/chocolatey/lib/winlibs/tools/mingw32/bin/../lib/gcc/i686-w64-mingw32/10.2.0/crtend.o
+        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_fc768.exe' '-shared-libgcc' '-mtune=generic' '-march=pentiumpro'
         
       exitCode: 0
   -
@@ -429,9 +429,9 @@ events:
     message: |
       Parsed CXX implicit link information:
         link line regex: [^( *|.*[/\\])(ld\\.exe|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
-        ignore line: [Change Dir: C:/Users/User/CLionProjects/CourseProject/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-oys6bx]
+        ignore line: [Change Dir: C:/Users/User/CLionProjects/CourseProject/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-iedpir]
         ignore line: []
-        ignore line: [Run Build Command(s):C:/Program Files/JetBrains/CLion 2023.2.2/bin/ninja/win/x64/ninja.exe -v cmTC_3efc8 && [1/2] C:\\ProgramData\\chocolatey\\lib\\winlibs\\tools\\mingw32\\bin\\c++.exe   -fdiagnostics-color=always   -v -o CMakeFiles/cmTC_3efc8.dir/CMakeCXXCompilerABI.cpp.obj -c "C:/Program Files/JetBrains/CLion 2023.2.2/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakeCXXCompilerABI.cpp"]
+        ignore line: [Run Build Command(s):C:/Program Files/JetBrains/CLion 2023.2.2/bin/ninja/win/x64/ninja.exe -v cmTC_fc768 && [1/2] C:\\ProgramData\\chocolatey\\lib\\winlibs\\tools\\mingw32\\bin\\c++.exe   -fdiagnostics-color=always   -v -o CMakeFiles/cmTC_fc768.dir/CMakeCXXCompilerABI.cpp.obj -c "C:/Program Files/JetBrains/CLion 2023.2.2/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakeCXXCompilerABI.cpp"]
         ignore line: [Using built-in specs.]
         ignore line: [COLLECT_GCC=C:\\ProgramData\\chocolatey\\lib\\winlibs\\tools\\mingw32\\bin\\c++.exe]
         ignore line: [OFFLOAD_TARGET_NAMES=nvptx-none]
@@ -440,8 +440,8 @@ events:
         ignore line: [Thread model: posix]
         ignore line: [Supported LTO compression algorithms: zlib zstd]
         ignore line: [gcc version 10.2.0 (MinGW-W64 i686-posix-dwarf  built by Brecht Sanders) ]
-        ignore line: [COLLECT_GCC_OPTIONS='-fdiagnostics-color=always' '-v' '-o' 'CMakeFiles/cmTC_3efc8.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-shared-libgcc' '-mtune=generic' '-march=pentiumpro']
-        ignore line: [ c:/programdata/chocolatey/lib/winlibs/tools/mingw32/bin/../libexec/gcc/i686-w64-mingw32/10.2.0/cc1plus.exe -quiet -v -iprefix c:\\programdata\\chocolatey\\lib\\winlibs\\tools\\mingw32\\bin\\../lib/gcc/i686-w64-mingw32/10.2.0/ -D_REENTRANT C:/Program Files/JetBrains/CLion 2023.2.2/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakeCXXCompilerABI.cpp -quiet -dumpbase CMakeCXXCompilerABI.cpp -mtune=generic -march=pentiumpro -auxbase-strip CMakeFiles/cmTC_3efc8.dir/CMakeCXXCompilerABI.cpp.obj -version -fdiagnostics-color=always -o C:\\Users\\User\\AppData\\Local\\Temp\\cc37Wtvh.s]
+        ignore line: [COLLECT_GCC_OPTIONS='-fdiagnostics-color=always' '-v' '-o' 'CMakeFiles/cmTC_fc768.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-shared-libgcc' '-mtune=generic' '-march=pentiumpro']
+        ignore line: [ c:/programdata/chocolatey/lib/winlibs/tools/mingw32/bin/../libexec/gcc/i686-w64-mingw32/10.2.0/cc1plus.exe -quiet -v -iprefix c:\\programdata\\chocolatey\\lib\\winlibs\\tools\\mingw32\\bin\\../lib/gcc/i686-w64-mingw32/10.2.0/ -D_REENTRANT C:/Program Files/JetBrains/CLion 2023.2.2/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakeCXXCompilerABI.cpp -quiet -dumpbase CMakeCXXCompilerABI.cpp -mtune=generic -march=pentiumpro -auxbase-strip CMakeFiles/cmTC_fc768.dir/CMakeCXXCompilerABI.cpp.obj -version -fdiagnostics-color=always -o C:\\Users\\User\\AppData\\Local\\Temp\\ccLQ8jPP.s]
         ignore line: [GNU C++14 (MinGW-W64 i686-posix-dwarf  built by Brecht Sanders) version 10.2.0 (i686-w64-mingw32)]
         ignore line: [	compiled by GNU C version 10.2.0  GMP version 6.2.1  MPFR version 4.1.0  MPC version 1.2.1  isl version isl-0.23-GMP]
         ignore line: []
@@ -470,8 +470,8 @@ events:
         ignore line: []
         ignore line: [GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072]
         ignore line: [Compiler executable checksum: 02610aa86149cc2ae8d4f1ff78a3161a]
-        ignore line: [COLLECT_GCC_OPTIONS='-fdiagnostics-color=always' '-v' '-o' 'CMakeFiles/cmTC_3efc8.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-shared-libgcc' '-mtune=generic' '-march=pentiumpro']
-        ignore line: [ c:/programdata/chocolatey/lib/winlibs/tools/mingw32/bin/../lib/gcc/i686-w64-mingw32/10.2.0/../../../../i686-w64-mingw32/bin/as.exe -v -o CMakeFiles/cmTC_3efc8.dir/CMakeCXXCompilerABI.cpp.obj C:\\Users\\User\\AppData\\Local\\Temp\\cc37Wtvh.s]
+        ignore line: [COLLECT_GCC_OPTIONS='-fdiagnostics-color=always' '-v' '-o' 'CMakeFiles/cmTC_fc768.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-shared-libgcc' '-mtune=generic' '-march=pentiumpro']
+        ignore line: [ c:/programdata/chocolatey/lib/winlibs/tools/mingw32/bin/../lib/gcc/i686-w64-mingw32/10.2.0/../../../../i686-w64-mingw32/bin/as.exe -v -o CMakeFiles/cmTC_fc768.dir/CMakeCXXCompilerABI.cpp.obj C:\\Users\\User\\AppData\\Local\\Temp\\ccLQ8jPP.s]
         ignore line: [GNU assembler version 2.36.1 (i686-w64-mingw32) using BFD version (Binutils for MinGW-W64 i686  built by Brecht Sanders) 2.36.1]
         ignore line: [COMPILER_PATH=c:/programdata/chocolatey/lib/winlibs/tools/mingw32/bin/../libexec/gcc/i686-w64-mingw32/10.2.0/]
         ignore line: [c:/programdata/chocolatey/lib/winlibs/tools/mingw32/bin/../libexec/gcc/]
@@ -482,8 +482,8 @@ events:
         ignore line: [c:/programdata/chocolatey/lib/winlibs/tools/mingw32/bin/../lib/gcc/i686-w64-mingw32/10.2.0/../../../../lib/]
         ignore line: [c:/programdata/chocolatey/lib/winlibs/tools/mingw32/bin/../lib/gcc/i686-w64-mingw32/10.2.0/../../../../i686-w64-mingw32/lib/]
         ignore line: [c:/programdata/chocolatey/lib/winlibs/tools/mingw32/bin/../lib/gcc/i686-w64-mingw32/10.2.0/../../../]
-        ignore line: [COLLECT_GCC_OPTIONS='-fdiagnostics-color=always' '-v' '-o' 'CMakeFiles/cmTC_3efc8.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-shared-libgcc' '-mtune=generic' '-march=pentiumpro']
-        ignore line: [[2/2] cmd.exe /C "cd . && C:\\ProgramData\\chocolatey\\lib\\winlibs\\tools\\mingw32\\bin\\c++.exe  -v CMakeFiles/cmTC_3efc8.dir/CMakeCXXCompilerABI.cpp.obj -o cmTC_3efc8.exe -Wl --out-implib libcmTC_3efc8.dll.a -Wl --major-image-version 0 --minor-image-version 0   && cd ."]
+        ignore line: [COLLECT_GCC_OPTIONS='-fdiagnostics-color=always' '-v' '-o' 'CMakeFiles/cmTC_fc768.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-shared-libgcc' '-mtune=generic' '-march=pentiumpro']
+        ignore line: [[2/2] cmd.exe /C "cd . && C:\\ProgramData\\chocolatey\\lib\\winlibs\\tools\\mingw32\\bin\\c++.exe  -v CMakeFiles/cmTC_fc768.dir/CMakeCXXCompilerABI.cpp.obj -o cmTC_fc768.exe -Wl --out-implib libcmTC_fc768.dll.a -Wl --major-image-version 0 --minor-image-version 0   && cd ."]
         ignore line: [Using built-in specs.]
         ignore line: [COLLECT_GCC=C:\\ProgramData\\chocolatey\\lib\\winlibs\\tools\\mingw32\\bin\\c++.exe]
         ignore line: [COLLECT_LTO_WRAPPER=c:/programdata/chocolatey/lib/winlibs/tools/mingw32/bin/../libexec/gcc/i686-w64-mingw32/10.2.0/lto-wrapper.exe]
@@ -502,13 +502,13 @@ events:
         ignore line: [c:/programdata/chocolatey/lib/winlibs/tools/mingw32/bin/../lib/gcc/i686-w64-mingw32/10.2.0/../../../../lib/]
         ignore line: [c:/programdata/chocolatey/lib/winlibs/tools/mingw32/bin/../lib/gcc/i686-w64-mingw32/10.2.0/../../../../i686-w64-mingw32/lib/]
         ignore line: [c:/programdata/chocolatey/lib/winlibs/tools/mingw32/bin/../lib/gcc/i686-w64-mingw32/10.2.0/../../../]
-        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_3efc8.exe' '-shared-libgcc' '-mtune=generic' '-march=pentiumpro']
-        link line: [ c:/programdata/chocolatey/lib/winlibs/tools/mingw32/bin/../libexec/gcc/i686-w64-mingw32/10.2.0/collect2.exe -plugin c:/programdata/chocolatey/lib/winlibs/tools/mingw32/bin/../libexec/gcc/i686-w64-mingw32/10.2.0/liblto_plugin-0.dll -plugin-opt=c:/programdata/chocolatey/lib/winlibs/tools/mingw32/bin/../libexec/gcc/i686-w64-mingw32/10.2.0/lto-wrapper.exe -plugin-opt=-fresolution=C:\\Users\\User\\AppData\\Local\\Temp\\ccUAnffe.res -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lmoldname -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lpthread -plugin-opt=-pass-through=-ladvapi32 -plugin-opt=-pass-through=-lshell32 -plugin-opt=-pass-through=-luser32 -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lmoldname -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -m i386pe -Bdynamic --large-address-aware -u ___register_frame_info -u ___deregister_frame_info -o cmTC_3efc8.exe c:/programdata/chocolatey/lib/winlibs/tools/mingw32/bin/../lib/gcc/i686-w64-mingw32/10.2.0/../../../../i686-w64-mingw32/lib/../lib/crt2.o c:/programdata/chocolatey/lib/winlibs/tools/mingw32/bin/../lib/gcc/i686-w64-mingw32/10.2.0/crtbegin.o -Lc:/programdata/chocolatey/lib/winlibs/tools/mingw32/bin/../lib/gcc/i686-w64-mingw32/10.2.0 -Lc:/programdata/chocolatey/lib/winlibs/tools/mingw32/bin/../lib/gcc -Lc:/programdata/chocolatey/lib/winlibs/tools/mingw32/bin/../lib/gcc/i686-w64-mingw32/10.2.0/../../../../i686-w64-mingw32/lib/../lib -Lc:/programdata/chocolatey/lib/winlibs/tools/mingw32/bin/../lib/gcc/i686-w64-mingw32/10.2.0/../../../../lib -Lc:/programdata/chocolatey/lib/winlibs/tools/mingw32/bin/../lib/gcc/i686-w64-mingw32/10.2.0/../../../../i686-w64-mingw32/lib -Lc:/programdata/chocolatey/lib/winlibs/tools/mingw32/bin/../lib/gcc/i686-w64-mingw32/10.2.0/../../.. CMakeFiles/cmTC_3efc8.dir/CMakeCXXCompilerABI.cpp.obj --out-implib libcmTC_3efc8.dll.a --major-image-version 0 --minor-image-version 0 -lstdc++ -lmingw32 -lgcc_s -lgcc -lmoldname -lmingwex -lmsvcrt -lpthread -ladvapi32 -lshell32 -luser32 -lkernel32 -lmingw32 -lgcc_s -lgcc -lmoldname -lmingwex -lmsvcrt c:/programdata/chocolatey/lib/winlibs/tools/mingw32/bin/../lib/gcc/i686-w64-mingw32/10.2.0/crtend.o]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_fc768.exe' '-shared-libgcc' '-mtune=generic' '-march=pentiumpro']
+        link line: [ c:/programdata/chocolatey/lib/winlibs/tools/mingw32/bin/../libexec/gcc/i686-w64-mingw32/10.2.0/collect2.exe -plugin c:/programdata/chocolatey/lib/winlibs/tools/mingw32/bin/../libexec/gcc/i686-w64-mingw32/10.2.0/liblto_plugin-0.dll -plugin-opt=c:/programdata/chocolatey/lib/winlibs/tools/mingw32/bin/../libexec/gcc/i686-w64-mingw32/10.2.0/lto-wrapper.exe -plugin-opt=-fresolution=C:\\Users\\User\\AppData\\Local\\Temp\\ccTcwVDT.res -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lmoldname -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lpthread -plugin-opt=-pass-through=-ladvapi32 -plugin-opt=-pass-through=-lshell32 -plugin-opt=-pass-through=-luser32 -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lmoldname -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -m i386pe -Bdynamic --large-address-aware -u ___register_frame_info -u ___deregister_frame_info -o cmTC_fc768.exe c:/programdata/chocolatey/lib/winlibs/tools/mingw32/bin/../lib/gcc/i686-w64-mingw32/10.2.0/../../../../i686-w64-mingw32/lib/../lib/crt2.o c:/programdata/chocolatey/lib/winlibs/tools/mingw32/bin/../lib/gcc/i686-w64-mingw32/10.2.0/crtbegin.o -Lc:/programdata/chocolatey/lib/winlibs/tools/mingw32/bin/../lib/gcc/i686-w64-mingw32/10.2.0 -Lc:/programdata/chocolatey/lib/winlibs/tools/mingw32/bin/../lib/gcc -Lc:/programdata/chocolatey/lib/winlibs/tools/mingw32/bin/../lib/gcc/i686-w64-mingw32/10.2.0/../../../../i686-w64-mingw32/lib/../lib -Lc:/programdata/chocolatey/lib/winlibs/tools/mingw32/bin/../lib/gcc/i686-w64-mingw32/10.2.0/../../../../lib -Lc:/programdata/chocolatey/lib/winlibs/tools/mingw32/bin/../lib/gcc/i686-w64-mingw32/10.2.0/../../../../i686-w64-mingw32/lib -Lc:/programdata/chocolatey/lib/winlibs/tools/mingw32/bin/../lib/gcc/i686-w64-mingw32/10.2.0/../../.. CMakeFiles/cmTC_fc768.dir/CMakeCXXCompilerABI.cpp.obj --out-implib libcmTC_fc768.dll.a --major-image-version 0 --minor-image-version 0 -lstdc++ -lmingw32 -lgcc_s -lgcc -lmoldname -lmingwex -lmsvcrt -lpthread -ladvapi32 -lshell32 -luser32 -lkernel32 -lmingw32 -lgcc_s -lgcc -lmoldname -lmingwex -lmsvcrt c:/programdata/chocolatey/lib/winlibs/tools/mingw32/bin/../lib/gcc/i686-w64-mingw32/10.2.0/crtend.o]
           arg [c:/programdata/chocolatey/lib/winlibs/tools/mingw32/bin/../libexec/gcc/i686-w64-mingw32/10.2.0/collect2.exe] ==> ignore
           arg [-plugin] ==> ignore
           arg [c:/programdata/chocolatey/lib/winlibs/tools/mingw32/bin/../libexec/gcc/i686-w64-mingw32/10.2.0/liblto_plugin-0.dll] ==> ignore
           arg [-plugin-opt=c:/programdata/chocolatey/lib/winlibs/tools/mingw32/bin/../libexec/gcc/i686-w64-mingw32/10.2.0/lto-wrapper.exe] ==> ignore
-          arg [-plugin-opt=-fresolution=C:\\Users\\User\\AppData\\Local\\Temp\\ccUAnffe.res] ==> ignore
+          arg [-plugin-opt=-fresolution=C:\\Users\\User\\AppData\\Local\\Temp\\ccTcwVDT.res] ==> ignore
           arg [-plugin-opt=-pass-through=-lmingw32] ==> ignore
           arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
           arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
@@ -535,7 +535,7 @@ events:
           arg [-u] ==> ignore
           arg [___deregister_frame_info] ==> ignore
           arg [-o] ==> ignore
-          arg [cmTC_3efc8.exe] ==> ignore
+          arg [cmTC_fc768.exe] ==> ignore
           arg [c:/programdata/chocolatey/lib/winlibs/tools/mingw32/bin/../lib/gcc/i686-w64-mingw32/10.2.0/../../../../i686-w64-mingw32/lib/../lib/crt2.o] ==> obj [c:/programdata/chocolatey/lib/winlibs/tools/mingw32/bin/../lib/gcc/i686-w64-mingw32/10.2.0/../../../../i686-w64-mingw32/lib/../lib/crt2.o]
           arg [c:/programdata/chocolatey/lib/winlibs/tools/mingw32/bin/../lib/gcc/i686-w64-mingw32/10.2.0/crtbegin.o] ==> obj [c:/programdata/chocolatey/lib/winlibs/tools/mingw32/bin/../lib/gcc/i686-w64-mingw32/10.2.0/crtbegin.o]
           arg [-Lc:/programdata/chocolatey/lib/winlibs/tools/mingw32/bin/../lib/gcc/i686-w64-mingw32/10.2.0] ==> dir [c:/programdata/chocolatey/lib/winlibs/tools/mingw32/bin/../lib/gcc/i686-w64-mingw32/10.2.0]
@@ -544,9 +544,9 @@ events:
           arg [-Lc:/programdata/chocolatey/lib/winlibs/tools/mingw32/bin/../lib/gcc/i686-w64-mingw32/10.2.0/../../../../lib] ==> dir [c:/programdata/chocolatey/lib/winlibs/tools/mingw32/bin/../lib/gcc/i686-w64-mingw32/10.2.0/../../../../lib]
           arg [-Lc:/programdata/chocolatey/lib/winlibs/tools/mingw32/bin/../lib/gcc/i686-w64-mingw32/10.2.0/../../../../i686-w64-mingw32/lib] ==> dir [c:/programdata/chocolatey/lib/winlibs/tools/mingw32/bin/../lib/gcc/i686-w64-mingw32/10.2.0/../../../../i686-w64-mingw32/lib]
           arg [-Lc:/programdata/chocolatey/lib/winlibs/tools/mingw32/bin/../lib/gcc/i686-w64-mingw32/10.2.0/../../..] ==> dir [c:/programdata/chocolatey/lib/winlibs/tools/mingw32/bin/../lib/gcc/i686-w64-mingw32/10.2.0/../../..]
-          arg [CMakeFiles/cmTC_3efc8.dir/CMakeCXXCompilerABI.cpp.obj] ==> ignore
+          arg [CMakeFiles/cmTC_fc768.dir/CMakeCXXCompilerABI.cpp.obj] ==> ignore
           arg [--out-implib] ==> ignore
-          arg [libcmTC_3efc8.dll.a] ==> ignore
+          arg [libcmTC_fc768.dll.a] ==> ignore
           arg [--major-image-version] ==> ignore
           arg [0] ==> ignore
           arg [--minor-image-version] ==> ignore

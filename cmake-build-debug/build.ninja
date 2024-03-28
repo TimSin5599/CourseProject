@@ -51,7 +51,7 @@ build cmake_object_order_depends_target_CourseProject: phony || CMakeFiles/Cours
 
 build CMakeFiles/CourseProject.dir/main.cpp.obj: CXX_COMPILER__CourseProject_unscanned_Debug C$:/Users/User/CLionProjects/CourseProject/main.cpp || cmake_object_order_depends_target_CourseProject
   DEP_FILE = CMakeFiles\CourseProject.dir\main.cpp.obj.d
-  FLAGS = -g -std=gnu++2a -fdiagnostics-color=always
+  FLAGS = -static-libstdc++ -static-libgcc -g -std=gnu++2a -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles\CourseProject.dir
   OBJECT_FILE_DIR = CMakeFiles\CourseProject.dir
   TARGET_COMPILE_PDB = CMakeFiles\CourseProject.dir\
@@ -66,7 +66,8 @@ build CMakeFiles/CourseProject.dir/main.cpp.obj: CXX_COMPILER__CourseProject_uns
 # Link the executable CourseProject.exe
 
 build CourseProject.exe: CXX_EXECUTABLE_LINKER__CourseProject_Debug CMakeFiles/CourseProject.dir/main.cpp.obj
-  FLAGS = -g
+  FLAGS = -static-libstdc++ -static-libgcc -g
+  LINK_FLAGS = -static
   LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\CourseProject.dir
   POST_BUILD = cd .
@@ -75,6 +76,210 @@ build CourseProject.exe: CXX_EXECUTABLE_LINKER__CourseProject_Debug CMakeFiles/C
   TARGET_FILE = CourseProject.exe
   TARGET_IMPLIB = libCourseProject.dll.a
   TARGET_PDB = CourseProject.pdb
+
+# =============================================================================
+# Object build statements for STATIC_LIBRARY target windows.h
+
+
+#############################################
+# Order-only phony target for windows.h
+
+build cmake_object_order_depends_target_windows.h: phony || CMakeFiles/windows.h.dir
+
+build CMakeFiles/windows.h.dir/main.cpp.obj: CXX_COMPILER__windows.2eh_unscanned_Debug C$:/Users/User/CLionProjects/CourseProject/main.cpp || cmake_object_order_depends_target_windows.h
+  DEP_FILE = CMakeFiles\windows.h.dir\main.cpp.obj.d
+  FLAGS = -static-libstdc++ -static-libgcc -g -std=gnu++2a -fdiagnostics-color=always
+  OBJECT_DIR = CMakeFiles\windows.h.dir
+  OBJECT_FILE_DIR = CMakeFiles\windows.h.dir
+  TARGET_COMPILE_PDB = CMakeFiles\windows.h.dir\windows.h.pdb
+  TARGET_PDB = libwindows.h.pdb
+
+
+# =============================================================================
+# Link build statements for STATIC_LIBRARY target windows.h
+
+
+#############################################
+# Link the static library libwindows.h.a
+
+build libwindows.h.a: CXX_STATIC_LIBRARY_LINKER__windows.2eh_Debug CMakeFiles/windows.h.dir/main.cpp.obj
+  LANGUAGE_COMPILE_FLAGS = -static-libstdc++ -static-libgcc -g
+  OBJECT_DIR = CMakeFiles\windows.h.dir
+  POST_BUILD = cd .
+  PRE_LINK = cd .
+  TARGET_COMPILE_PDB = CMakeFiles\windows.h.dir\windows.h.pdb
+  TARGET_FILE = libwindows.h.a
+  TARGET_PDB = libwindows.h.pdb
+
+# =============================================================================
+# Object build statements for STATIC_LIBRARY target cstdlib
+
+
+#############################################
+# Order-only phony target for cstdlib
+
+build cmake_object_order_depends_target_cstdlib: phony || CMakeFiles/cstdlib.dir
+
+build CMakeFiles/cstdlib.dir/main.cpp.obj: CXX_COMPILER__cstdlib_unscanned_Debug C$:/Users/User/CLionProjects/CourseProject/main.cpp || cmake_object_order_depends_target_cstdlib
+  DEP_FILE = CMakeFiles\cstdlib.dir\main.cpp.obj.d
+  FLAGS = -static-libstdc++ -static-libgcc -g -std=gnu++2a -fdiagnostics-color=always
+  OBJECT_DIR = CMakeFiles\cstdlib.dir
+  OBJECT_FILE_DIR = CMakeFiles\cstdlib.dir
+  TARGET_COMPILE_PDB = CMakeFiles\cstdlib.dir\cstdlib.pdb
+  TARGET_PDB = libcstdlib.pdb
+
+
+# =============================================================================
+# Link build statements for STATIC_LIBRARY target cstdlib
+
+
+#############################################
+# Link the static library libcstdlib.a
+
+build libcstdlib.a: CXX_STATIC_LIBRARY_LINKER__cstdlib_Debug CMakeFiles/cstdlib.dir/main.cpp.obj
+  LANGUAGE_COMPILE_FLAGS = -static-libstdc++ -static-libgcc -g
+  OBJECT_DIR = CMakeFiles\cstdlib.dir
+  POST_BUILD = cd .
+  PRE_LINK = cd .
+  TARGET_COMPILE_PDB = CMakeFiles\cstdlib.dir\cstdlib.pdb
+  TARGET_FILE = libcstdlib.a
+  TARGET_PDB = libcstdlib.pdb
+
+# =============================================================================
+# Object build statements for STATIC_LIBRARY target string
+
+
+#############################################
+# Order-only phony target for string
+
+build cmake_object_order_depends_target_string: phony || CMakeFiles/string.dir
+
+build CMakeFiles/string.dir/main.cpp.obj: CXX_COMPILER__string_unscanned_Debug C$:/Users/User/CLionProjects/CourseProject/main.cpp || cmake_object_order_depends_target_string
+  DEP_FILE = CMakeFiles\string.dir\main.cpp.obj.d
+  FLAGS = -static-libstdc++ -static-libgcc -g -std=gnu++2a -fdiagnostics-color=always
+  OBJECT_DIR = CMakeFiles\string.dir
+  OBJECT_FILE_DIR = CMakeFiles\string.dir
+  TARGET_COMPILE_PDB = CMakeFiles\string.dir\string.pdb
+  TARGET_PDB = libstring.pdb
+
+
+# =============================================================================
+# Link build statements for STATIC_LIBRARY target string
+
+
+#############################################
+# Link the static library libstring.a
+
+build libstring.a: CXX_STATIC_LIBRARY_LINKER__string_Debug CMakeFiles/string.dir/main.cpp.obj
+  LANGUAGE_COMPILE_FLAGS = -static-libstdc++ -static-libgcc -g
+  OBJECT_DIR = CMakeFiles\string.dir
+  POST_BUILD = cd .
+  PRE_LINK = cd .
+  TARGET_COMPILE_PDB = CMakeFiles\string.dir\string.pdb
+  TARGET_FILE = libstring.a
+  TARGET_PDB = libstring.pdb
+
+# =============================================================================
+# Object build statements for STATIC_LIBRARY target tchar.h
+
+
+#############################################
+# Order-only phony target for tchar.h
+
+build cmake_object_order_depends_target_tchar.h: phony || CMakeFiles/tchar.h.dir
+
+build CMakeFiles/tchar.h.dir/main.cpp.obj: CXX_COMPILER__tchar.2eh_unscanned_Debug C$:/Users/User/CLionProjects/CourseProject/main.cpp || cmake_object_order_depends_target_tchar.h
+  DEP_FILE = CMakeFiles\tchar.h.dir\main.cpp.obj.d
+  FLAGS = -static-libstdc++ -static-libgcc -g -std=gnu++2a -fdiagnostics-color=always
+  OBJECT_DIR = CMakeFiles\tchar.h.dir
+  OBJECT_FILE_DIR = CMakeFiles\tchar.h.dir
+  TARGET_COMPILE_PDB = CMakeFiles\tchar.h.dir\tchar.h.pdb
+  TARGET_PDB = libtchar.h.pdb
+
+
+# =============================================================================
+# Link build statements for STATIC_LIBRARY target tchar.h
+
+
+#############################################
+# Link the static library libtchar.h.a
+
+build libtchar.h.a: CXX_STATIC_LIBRARY_LINKER__tchar.2eh_Debug CMakeFiles/tchar.h.dir/main.cpp.obj
+  LANGUAGE_COMPILE_FLAGS = -static-libstdc++ -static-libgcc -g
+  OBJECT_DIR = CMakeFiles\tchar.h.dir
+  POST_BUILD = cd .
+  PRE_LINK = cd .
+  TARGET_COMPILE_PDB = CMakeFiles\tchar.h.dir\tchar.h.pdb
+  TARGET_FILE = libtchar.h.a
+  TARGET_PDB = libtchar.h.pdb
+
+# =============================================================================
+# Object build statements for STATIC_LIBRARY target filesystem
+
+
+#############################################
+# Order-only phony target for filesystem
+
+build cmake_object_order_depends_target_filesystem: phony || CMakeFiles/filesystem.dir
+
+build CMakeFiles/filesystem.dir/main.cpp.obj: CXX_COMPILER__filesystem_unscanned_Debug C$:/Users/User/CLionProjects/CourseProject/main.cpp || cmake_object_order_depends_target_filesystem
+  DEP_FILE = CMakeFiles\filesystem.dir\main.cpp.obj.d
+  FLAGS = -static-libstdc++ -static-libgcc -g -std=gnu++2a -fdiagnostics-color=always
+  OBJECT_DIR = CMakeFiles\filesystem.dir
+  OBJECT_FILE_DIR = CMakeFiles\filesystem.dir
+  TARGET_COMPILE_PDB = CMakeFiles\filesystem.dir\filesystem.pdb
+  TARGET_PDB = libfilesystem.pdb
+
+
+# =============================================================================
+# Link build statements for STATIC_LIBRARY target filesystem
+
+
+#############################################
+# Link the static library libfilesystem.a
+
+build libfilesystem.a: CXX_STATIC_LIBRARY_LINKER__filesystem_Debug CMakeFiles/filesystem.dir/main.cpp.obj
+  LANGUAGE_COMPILE_FLAGS = -static-libstdc++ -static-libgcc -g
+  OBJECT_DIR = CMakeFiles\filesystem.dir
+  POST_BUILD = cd .
+  PRE_LINK = cd .
+  TARGET_COMPILE_PDB = CMakeFiles\filesystem.dir\filesystem.pdb
+  TARGET_FILE = libfilesystem.a
+  TARGET_PDB = libfilesystem.pdb
+
+# =============================================================================
+# Object build statements for STATIC_LIBRARY target thread
+
+
+#############################################
+# Order-only phony target for thread
+
+build cmake_object_order_depends_target_thread: phony || CMakeFiles/thread.dir
+
+build CMakeFiles/thread.dir/main.cpp.obj: CXX_COMPILER__thread_unscanned_Debug C$:/Users/User/CLionProjects/CourseProject/main.cpp || cmake_object_order_depends_target_thread
+  DEP_FILE = CMakeFiles\thread.dir\main.cpp.obj.d
+  FLAGS = -static-libstdc++ -static-libgcc -g -std=gnu++2a -fdiagnostics-color=always
+  OBJECT_DIR = CMakeFiles\thread.dir
+  OBJECT_FILE_DIR = CMakeFiles\thread.dir
+  TARGET_COMPILE_PDB = CMakeFiles\thread.dir\thread.pdb
+  TARGET_PDB = libthread.pdb
+
+
+# =============================================================================
+# Link build statements for STATIC_LIBRARY target thread
+
+
+#############################################
+# Link the static library libthread.a
+
+build libthread.a: CXX_STATIC_LIBRARY_LINKER__thread_Debug CMakeFiles/thread.dir/main.cpp.obj
+  LANGUAGE_COMPILE_FLAGS = -static-libstdc++ -static-libgcc -g
+  OBJECT_DIR = CMakeFiles\thread.dir
+  POST_BUILD = cd .
+  PRE_LINK = cd .
+  TARGET_COMPILE_PDB = CMakeFiles\thread.dir\thread.pdb
+  TARGET_FILE = libthread.a
+  TARGET_PDB = libthread.pdb
 
 
 #############################################
@@ -104,6 +309,18 @@ build rebuild_cache: phony CMakeFiles/rebuild_cache.util
 
 build CourseProject: phony CourseProject.exe
 
+build cstdlib: phony libcstdlib.a
+
+build filesystem: phony libfilesystem.a
+
+build string: phony libstring.a
+
+build tchar.h: phony libtchar.h.a
+
+build thread: phony libthread.a
+
+build windows.h: phony libwindows.h.a
+
 # =============================================================================
 # Folder targets.
 
@@ -112,7 +329,7 @@ build CourseProject: phony CourseProject.exe
 #############################################
 # Folder: C:/Users/User/CLionProjects/CourseProject/cmake-build-debug
 
-build all: phony CourseProject.exe
+build all: phony CourseProject.exe libwindows.h.a libcstdlib.a libstring.a libtchar.h.a libfilesystem.a libthread.a
 
 # =============================================================================
 # Built-in targets

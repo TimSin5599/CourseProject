@@ -1,7 +1,17 @@
 # ninja log v5
-1	3476	7328933689803030	CMakeFiles/CourseProject.dir/main.cpp.obj	d5bdca631d3f5c26
-3478	3692	7328933691916132	CourseProject.exe	a8489e7cd8eb9a89
-3	2619	7329817747648288	CMakeFiles/CourseProject.dir/main.cpp.obj	d5bdca631d3f5c26
-2619	2918	7329817750603597	CourseProject.exe	a8489e7cd8eb9a89
-2	1829	7329818822416242	CMakeFiles/CourseProject.dir/main.cpp.obj	d5bdca631d3f5c26
-1830	2005	7329818824132215	CourseProject.exe	a8489e7cd8eb9a89
+0	1919	7333354536392212	CMakeFiles/CourseProject.dir/main.cpp.obj	d5bdca631d3f5c26
+1920	2219	7333354539343309	CourseProject.exe	a8489e7cd8eb9a89
+13	2092	7333415318768087	CMakeFiles/cstdlib.dir/main.cpp.obj	d400a572c11d3a1d
+20	2099	7333415318827930	CMakeFiles/filesystem.dir/main.cpp.obj	6ab5c32a4bcf875b
+16	2106	7333415318877822	CMakeFiles/tchar.h.dir/main.cpp.obj	537f33c3cf6cd126
+10	2115	7333415318897766	CMakeFiles/string.dir/main.cpp.obj	5580b7442cc38521
+7	2122	7333415319017472	CMakeFiles/windows.h.dir/main.cpp.obj	f4bce868e54399c8
+3	2128	7333415319037418	CMakeFiles/CourseProject.dir/main.cpp.obj	6182a1c4a7202621
+2115	2293	7333415320730835	libstring.a	9dca6863ea0c5f5d
+2122	2298	7333415320740810	libwindows.h.a	20ce936ea19171d6
+2092	2299	7333415320730835	libcstdlib.a	9f71d6bc1320b751
+2106	2299	7333415320750787	libtchar.h.a	85e8734c53b9b2a1
+2293	2406	7333415321902808	libfilesystem.a	8c15bdceabf4cecb
+2129	2649	7333415324284504	CourseProject.exe	df637680a02075b5
+2099	4016	7333415338005164	CMakeFiles/thread.dir/main.cpp.obj	f3fc3ee3fa5ca6fa
+4016	4107	7333415338919205	libthread.a	e5927eadf6cf8bfd

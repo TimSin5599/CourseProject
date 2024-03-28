@@ -1,3 +1,9 @@
 C:/Users/User/CLionProjects/CourseProject/cmake-build-debug/CMakeFiles/CourseProject.dir
+C:/Users/User/CLionProjects/CourseProject/cmake-build-debug/CMakeFiles/windows.h.dir
+C:/Users/User/CLionProjects/CourseProject/cmake-build-debug/CMakeFiles/cstdlib.dir
+C:/Users/User/CLionProjects/CourseProject/cmake-build-debug/CMakeFiles/string.dir
+C:/Users/User/CLionProjects/CourseProject/cmake-build-debug/CMakeFiles/tchar.h.dir
+C:/Users/User/CLionProjects/CourseProject/cmake-build-debug/CMakeFiles/filesystem.dir
+C:/Users/User/CLionProjects/CourseProject/cmake-build-debug/CMakeFiles/thread.dir
 C:/Users/User/CLionProjects/CourseProject/cmake-build-debug/CMakeFiles/edit_cache.dir
 C:/Users/User/CLionProjects/CourseProject/cmake-build-debug/CMakeFiles/rebuild_cache.dir
