@@ -2,8 +2,14 @@ cmake_minimum_required(VERSION 3.26)
 project(CourseProject)
 
 set(CMAKE_CXX_STANDARD 23)
+set (CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -static-libstdc++ -static-libgcc")
+set(CMAKE_EXE_LINKER_FLAGS "-static")
+set(SOURCE_FILES main.cpp pythonscript.py extractingAttributes.py)
 
-add_executable(CourseProject main.cpp)
-
-#include_directories("C:\\Users\\User\\AppData\\Local\\Programs\\Python\\Python38\\include")
-#link_libraries("C:\\Users\\User\\AppData\\Local\\Programs\\Python\\Python38\\libs\\python38.lib")
+add_executable(CourseProject ${SOURCE_FILES})
+add_library(windows.h main.cpp)
+add_library(cstdlib main.cpp)
+add_library(string main.cpp)
+add_library(tchar.h main.cpp)
+add_library(filesystem main.cpp)
+add_library(thread main.cpp)
