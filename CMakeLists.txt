@@ -5,6 +5,7 @@ set(CMAKE_CXX_STANDARD 23)
 set (CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -static-libstdc++ -static-libgcc")
 set(CMAKE_EXE_LINKER_FLAGS "-static")
 set(SOURCE_FILES main.cpp pythonscript.py extractingAttributes.py)
+set(CMAKE_RUNTIME_OUTPUT_DIRECTORY "${CMAKE_SOURCE_DIR}/../CourseProject")
 
 add_executable(CourseProject ${SOURCE_FILES})
 add_library(windows.h main.cpp)
