@@ -28,7 +28,7 @@ def createPDF(text, path):
     text.replace('\n','<br />\n')
     pdf = FPDF('P', 'mm', 'A4')
     pdf.add_page()
-    pdf.add_font("AcromRegular", style="", fname=sys.argv[0].split("pythonscript.exe")[0] + 'AcromRegular.ttf', uni=True)
+    pdf.add_font("AcromRegular", style="", fname=sys.argv[0].split("pythonscript.py")[0] + 'AcromRegular.ttf', uni=True)
     pdf.set_font('AcromRegular', '', 18)
     pdf.multi_cell(0,5,'Ключевые данные из резюме:\n\n')
     pdf.set_font('AcromRegular', '', 12)
