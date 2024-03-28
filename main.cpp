@@ -9,18 +9,16 @@ static TCHAR szWindowClass[] = _T("CourseProject");
 
 static TCHAR szTitle[] = _T("CourseProject");
 
-std::string fullPath = std::filesystem::current_path().parent_path().string() + std::string("\\pythonscript.py");
+std::string fullPath = std::filesystem::current_path().string() + std::string("\\pythonscript.exe");
 
 HINSTANCE hInst;
 
 LRESULT CALLBACK WndProc(HWND, UINT, WPARAM, LPARAM);
 
-int WINAPI WinMain(
-        _In_ HINSTANCE hInstance,
-        _In_opt_ HINSTANCE hPrevInstance,
-        _In_ LPSTR     lpCmdLine,
-        _In_ int       nCmdShow
-)
+int WINAPI WinMain( _In_ HINSTANCE hInstance,
+                    _In_opt_ HINSTANCE hPrevInstance,
+                    _In_ LPSTR     lpCmdLine,
+                    _In_ int       nCmdShow)
 {
     WNDCLASSEX wcex;
 
@@ -72,7 +70,9 @@ int WINAPI WinMain(
         return 1;
     }
 
+
     ShowWindow(hWnd, nCmdShow);
+    ShowWindow(::GetConsoleWindow(), SW_HIDE);
     UpdateWindow(hWnd);
 
     // Main message loop:
@@ -91,8 +91,9 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
     PAINTSTRUCT ps;
     HDC hdc;
     TCHAR greeting[] = _T("Extracting key attributes from a resume (Russian)");
+    WCHAR inscription[] = L"Выберите файлы разрешения: \n.pdf .docx или .txt \nдля извлечения ключевых атрибутов";
     static HWND hwndButton;
-    static int x = 400;
+    static int x = 420;
     static int y = 10;
     static HFONT hFont = nullptr;
 
@@ -104,13 +105,16 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
 
             auto hOldFont = (HFONT)SelectObject(hdc, hFont);
 
-            TextOut(hdc,
-                    x, y,
-                    greeting, _tcslen(greeting));
+
+            TextOut(hdc, x, y,greeting, _tcslen(greeting));
+
+            RECT rect;
+            GetClientRect(hWnd, &rect);
+            DrawTextW(hdc, inscription, -1, &rect, DT_CENTER | DT_VCENTER | DT_SINGLELINE);
 
             SelectObject(hdc, hOldFont);
-
             EndPaint(hWnd, &ps);
+
             break;
         }
         case WM_CREATE:
@@ -147,12 +151,12 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
 
             if (hFont == nullptr)
             {
-                MessageBox(hWnd, _T("Не удалось создать шрифт!"), _T("Ошибка"), MB_OK | MB_ICONERROR);
+                MessageBoxW(hWnd, (L"Не удалось создать шрифт!"), L"Ошибка", MB_OK | MB_ICONERROR);
                 return -1;
             }
             if (hwndButton == nullptr)
             {
-                MessageBox(hWnd, _T("Не удалось создать кнопку!"), _T("Ошибка"), MB_OK | MB_ICONERROR);
+                MessageBoxW(hWnd, L"Не удалось создать кнопку!", L"Ошибка", MB_OK | MB_ICONERROR);
             }
 
             break;
@@ -173,11 +177,9 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
                 ofn.nMaxFile = MAX_PATH;
                 ofn.Flags = OFN_EXPLORER | OFN_FILEMUSTEXIST | OFN_HIDEREADONLY;
 
-                const char* pythonExecutable = "python";
-
                 if (GetOpenFileName(&ofn))
                 {
-                    std::string command = std::string(pythonExecutable) + " " + fullPath + " " + szFileName;
+                    std::string command = fullPath + " " + szFileName;
                     std::thread thread(std::system, command.c_str());
                     thread.join();
                 }
