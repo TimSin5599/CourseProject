@@ -9,7 +9,7 @@ static TCHAR szWindowClass[] = _T("CourseProject");
 
 static TCHAR szTitle[] = _T("CourseProject");
 
-std::string fullPath = std::filesystem::current_path().string() + std::string("\\pythonscript.exe");
+std::string fullPath = std::filesystem::current_path().string() + std::string("\\pythonscript.py");
 
 HINSTANCE hInst;
 
@@ -179,7 +179,7 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
 
                 if (GetOpenFileName(&ofn))
                 {
-                    std::string command = fullPath + " " + szFileName;
+                    std::string command = "python " + fullPath + " " + szFileName;
                     std::thread thread(std::system, command.c_str());
                     thread.join();
                 }
