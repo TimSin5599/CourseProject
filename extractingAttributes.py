@@ -7,11 +7,11 @@ from docx import Document
 import spacy
 import re
 from spacy.matcher import Matcher
-from natasha import Segmenter, NewsEmbedding, NewsMorphTagger, NewsSyntaxParser, Doc, NewsNERTagger
+from natasha import PER, NamesExtractor, Doc, MorphVocab
 
+pathModel = sys.argv[0].split("pythonscript.py")[0] + "ModelNER\\output\\"
+nlp_model = spacy.load(pathModel+"model-best")
 nlp = spacy.load("ru_core_news_lg")
-pathModel = sys.argv[0].split("pythonscript.py")[0] + "ModelNER\\output\\model-best"
-nlp_model = spacy.load(pathModel)
 
 def build_path():
     length = len(sys.argv)
@@ -32,20 +32,15 @@ def open_file(path):
     if extension == "txt":
         with open(path, 'r', encoding='utf-8') as file:
             text = file.read()
-            text = text.replace("\n", " ")
-        return text
     elif extension == "pdf":
         with fitz.open(path) as pdf_doc:
             for page_num in range(pdf_doc.page_count):
                 page = pdf_doc[page_num]
-                text += page.get_text().replace("\n", " ")
-        return text
+                text += page.get_text() + " "
     elif extension == "docx":
         doc = Document(path)
-
         for paragraph in doc.paragraphs:
-            text += paragraph.text.replace("\n", " ")
-        return text
+            text += paragraph.text + " "
     else:
         root = tk.Tk()
         root.withdraw()
@@ -55,9 +50,13 @@ def open_file(path):
         root.quit()
         exit(0)
 
+    text = text.replace("\n", " ")
+    text = text.replace("  ", " ")
+    return text
+
 
 def get_phone_number(text):
-    phones = re.findall(r"(?:(?:8|\+7)[\-\s]?)?(?:\(?\d{3}\)?[\-\s]?)?[\d\-\s]{7,10}", text)
+    phones = re.findall(r"(?:(?:8|\+7)[\-\s]?)+(?:\(?\d{3}\)?[\-\s]?)+[\d\-\s]{7,10}", text)
     if len(phones) == 0:
         return ""
     text_ = str(phones[0])
@@ -81,10 +80,22 @@ def get_email(text):
 
 
 def get_name(text):
+    # doc = Doc(text)
+    # morph_vocab = MorphVocab()
+    # names_extractor = NamesExtractor(morph_vocab)
+    #
+    # if doc.spans is not None:
+    #     for span in doc.spans:
+    #         if span.type == PER:
+    #             return span.extract_fact(names_extractor)
+    # else:
+    #     return ""
     nlp_text = nlp(text)
     matcher = Matcher(nlp.vocab)
-    pattern = [{'POS': 'PROPN'}, {'POS': 'PROPN'}, {'POS': 'PROPN', 'OP': '?'}]
-    matcher.add('NAME', [pattern])
+    # pattern_only_name = [{'POS': 'PROPN'}]
+    # pattern_name_surname = [{'POS': 'PROPN'}, {'POS': 'PROPN'}]
+    pattern_full_name = [{'POS': 'PROPN'}, {'POS': 'PROPN'}, {'POS': 'PROPN', 'OP': '?'}]
+    matcher.add('NAME', [pattern_full_name])
     matches = matcher(nlp_text)
 
     span = None
@@ -102,22 +113,6 @@ def get_name(text):
     else:
         return ""
 
-def get_organization(text):
-    segmenter = Segmenter()
-    emb = NewsEmbedding()
-    morph_tagger = NewsMorphTagger(emb)
-    syntax_parser = NewsSyntaxParser(emb)
-    ner_tagger = NewsNERTagger(emb)
-
-    doc = Doc(text)
-    doc.segment(segmenter)
-    doc.tag_morph(morph_tagger)
-    doc.parse_syntax(syntax_parser)
-    doc.tag_ner(ner_tagger)
-
-    organization = [i.text for i in doc.spans if i.type == "ORG"]
-    return organization
-
 def get_attributes_from_model(text):
     doc = nlp_model(text)
     skills = []
@@ -127,6 +122,8 @@ def get_attributes_from_model(text):
     self_summary = []
     speciality = []
     faculty = []
+    adr = []
+    data = []
 
     for ents in doc.ents:
         if ents.label_ == "SKILLS":
@@ -143,5 +140,9 @@ def get_attributes_from_model(text):
             speciality.append(ents.text)
         elif ents.label_ == "FACULTY":
             faculty.append(ents.text)
+        elif ents.label_ == "ADR":
+            adr.append(ents.text)
+        elif ents.label_ == "DATA":
+            data.append(ents.text)
 
-    return skills, edu, org, languages, self_summary, speciality, faculty
+    return skills, edu, org, languages, self_summary, speciality, faculty, adr, data
