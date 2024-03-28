@@ -28,7 +28,7 @@ def createPDF(text, path):
     text.replace('\n','<br />\n')
     pdf = FPDF('P', 'mm', 'A4')
     pdf.add_page()
-    pdf.add_font("AcromRegular", style="", fname=sys.argv[0].split("pythonscript.py")[0] + 'AcromRegular.ttf', uni=True)
+    pdf.add_font("AcromRegular", style="", fname=sys.argv[0].split("pythonscript.exe")[0] + 'AcromRegular.ttf', uni=True)
     pdf.set_font('AcromRegular', '', 18)
     pdf.multi_cell(0,5,'Ключевые данные из резюме:\n\n')
     pdf.set_font('AcromRegular', '', 12)
@@ -45,18 +45,22 @@ if __name__ == '__main__':
     path_ = build_path()
     text_ = open_file(path_)
 
-    skills, edu, org, languages, self_summary, speciality, faculty = get_attributes_from_model(text_)
+    skills, edu, org, languages, self_summary, speciality, faculty, adr, data = get_attributes_from_model(text_)
+    if len(data) != 0:
+        data = [data[0]]
     text = ""
     text += get_name(text_) + "\n"
+    text += "Дата рождения: " + get_text_from_array(data) + "\n"
     text += "Номер телефона: " + get_phone_number(text_) + "\n"
     text += "Email: " + get_email(text_) + "\n"
+    text += "Адрес: " + get_text_from_array(adr) + "\n"
     text += "Образовательные учреждения: " + "\n" + get_text_from_array(edu) + "\n"
     text += "Факультеты: " + get_text_from_array(faculty) + "\n"
     text += "Специальности: " + get_text_from_array(speciality) + "\n"
     text += "Организации: " + "\n" + get_text_from_array(org) + "\n"
     text += "Опыт работы: " + "\n" + get_text_from_array(get_experience(text_)) + "\n"
     text += "Языки: " + get_text_from_array(languages) + "\n"
-    text += "Навыки: " + "\n" + get_text_from_array(skills) + "\n"
+    text += "Ключевые навыки: " + "\n" + get_text_from_array(skills) + "\n"
     text += "Личная информация: " + "\n" + get_text_from_array(self_summary) + "\n"
 
     root = tk.Tk()
