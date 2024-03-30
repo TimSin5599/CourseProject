@@ -45,23 +45,27 @@ if __name__ == '__main__':
     path_ = build_path()
     text_ = open_file(path_)
 
-    skills, edu, org, languages, self_summary, speciality, faculty, adr, data = get_attributes_from_model(text_)
+    name, skills, edu, org, languages, self_summary, speciality, faculty, adr, data = get_attributes_from_model(text_)
     if len(data) != 0:
         data = [data[0]]
+    if len(name) != 0:
+        person = get_name(text_)
+    else:
+        person = "-"
     text = ""
-    text += get_name(text_) + "\n"
-    text += "Дата рождения: " + get_text_from_array(data) + "\n"
+    text += person + "\n"
+    text += "Дата рождения: " + get_text_from_array(list(set(data))) + "\n"
     text += "Номер телефона: " + get_phone_number(text_) + "\n"
     text += "Email: " + get_email(text_) + "\n"
-    text += "Адрес: " + get_text_from_array(adr) + "\n"
-    text += "Образовательные учреждения: " + "\n" + get_text_from_array(edu) + "\n"
-    text += "Факультеты: " + get_text_from_array(faculty) + "\n"
-    text += "Специальности: " + get_text_from_array(speciality) + "\n"
-    text += "Организации: " + "\n" + get_text_from_array(org) + "\n"
+    text += "Адрес: " + get_text_from_array(list(set(adr))) + "\n"
+    text += "Образовательные учреждения: " + "\n" + get_text_from_array(list(set(edu))) + "\n"
+    text += "Факультеты: " + get_text_from_array(list(set(faculty))) + "\n"
+    text += "Специальности: " + get_text_from_array(list(set(speciality))) + "\n"
+    text += "Организации: " + "\n" + get_text_from_array(list(set(org))) + "\n"
     text += "Опыт работы: " + "\n" + get_text_from_array(get_experience(text_)) + "\n"
-    text += "Языки: " + get_text_from_array(languages) + "\n"
-    text += "Ключевые навыки: " + "\n" + get_text_from_array(skills) + "\n"
-    text += "Личная информация: " + "\n" + get_text_from_array(self_summary) + "\n"
+    text += "Языки: " + get_text_from_array(list(set(languages))) + "\n"
+    text += "Ключевые навыки: " + "\n" + get_text_from_array(list(set(skills))) + "\n"
+    text += "Личная информация: " + "\n" + get_text_from_array(list(set(self_summary))) + "\n"
 
     root = tk.Tk()
     root.withdraw()
