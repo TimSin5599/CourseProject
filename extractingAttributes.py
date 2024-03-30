@@ -50,6 +50,7 @@ def open_file(path):
         exit(0)
 
     text = text.replace("\n", " ")
+    text = text.replace(" ", " ")
     text = text.replace("  ", " ")
     return text
 
@@ -61,7 +62,6 @@ def get_phone_number(text):
     text_ = str(phones[0])
     text_ = text_[::-1].replace(" ", "", 1)[::-1]
     text_ = text_.replace(" ", "-")
-    # text_ = text_.replace("\t", "-")
     return text_
 
 def get_experience(text):
@@ -122,6 +122,7 @@ def get_attributes_from_model(text):
     faculty = []
     adr = []
     data = []
+    name = []
 
     for ents in doc.ents:
         if ents.label_ == "SKILLS":
@@ -142,5 +143,7 @@ def get_attributes_from_model(text):
             adr.append(ents.text)
         elif ents.label_ == "DATA":
             data.append(ents.text)
+        elif ents.label_ == "PER":
+            name.append(ents.text)
 
-    return skills, edu, org, languages, self_summary, speciality, faculty, adr, data
+    return name, skills, edu, org, languages, self_summary, speciality, faculty, adr, data
