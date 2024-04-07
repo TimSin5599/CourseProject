@@ -18,7 +18,6 @@ from natasha import (
     PER
 )
 
-
 pathModel = sys.argv[0].split("\\pythonscript.py")[0]
 nlp_model = spacy.load(pathModel + "\\ModelNER\\output\\model-best")
 nlp = spacy.load("ru_core_news_lg")
@@ -50,7 +49,6 @@ def open_file(path):
 
     return text
 
-
 def get_phone_number(text):
     phones = re.findall(r"(?:(?:8|\+7|7)[\-\s]?)+(?:\(?\d{3}\)?[\-\s]?)+[\d\-\s]{7,10}", text)
     if len(phones) == 0:
@@ -73,7 +71,6 @@ def get_email(text):
     if len(emails) == 0:
         return ""
     return emails[0]
-
 
 def get_name(text):
     emb = NewsEmbedding()
