@@ -15,7 +15,7 @@ from extractingAttributes import (
     get_attributes_from_model)
 
 path_ = sys.argv[1]
-pathDir = sys.argv[0].split("pythonscript.exe")[0]
+pathDir = sys.argv[0].split("pythonscript.py")[0]
 pathFont = pathDir + 'fonts\\AcromRegular.ttf'
 
 def get_text_from_array(array):
