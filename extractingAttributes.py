@@ -6,23 +6,22 @@ import fitz
 from docx import Document
 import spacy
 import re
-from spacy.matcher import Matcher
+from natasha import (
+    Doc,
+    Segmenter,
+    MorphVocab,
+    NamesExtractor,
+    NewsEmbedding,
+    NewsMorphTagger,
+    NewsSyntaxParser,
+    NewsNERTagger,
+    PER
+)
 
-pathModel = sys.argv[0].split("pythonscript.py")[0] + "ModelNER\\output\\"
-nlp_model = spacy.load(pathModel+"model-best")
-nlp = spacy.load("ru_core_news_lg")
 
-def build_path():
-    length = len(sys.argv)
-    if length == 0:
-        return ""
-
-    path = ""
-    for i in range(1, length - 1):
-        path += sys.argv[i] + " "
-    path += sys.argv[length - 1]
-    return path
-
+pathModel = sys.argv[0].split("\\pythonscript.exe")[0]
+nlp_model = spacy.load(pathModel + "\\ModelNER\\output\\model-best")
+nlp = spacy.load(pathModel + "\\ModelNER\\output\\ru_core_news_lg")
 
 def open_file(path):
     text = ""
@@ -49,19 +48,17 @@ def open_file(path):
         root.quit()
         exit(0)
 
-    text = text.replace("\n", " ")
-    text = text.replace(" ", " ")
-    text = text.replace("  ", " ")
     return text
 
 
 def get_phone_number(text):
-    phones = re.findall(r"(?:(?:8|\+7)[\-\s]?)+(?:\(?\d{3}\)?[\-\s]?)+[\d\-\s]{7,10}", text)
+    phones = re.findall(r"(?:(?:8|\+7|7)[\-\s]?)+(?:\(?\d{3}\)?[\-\s]?)+[\d\-\s]{7,10}", text)
     if len(phones) == 0:
         return ""
     text_ = str(phones[0])
     text_ = text_[::-1].replace(" ", "", 1)[::-1]
     text_ = text_.replace(" ", "-")
+    text_ = text_.replace("\n", " ")
     return text_
 
 def get_experience(text):
@@ -79,71 +76,80 @@ def get_email(text):
 
 
 def get_name(text):
-    # doc = Doc(text)
-    # morph_vocab = MorphVocab()
-    # names_extractor = NamesExtractor(morph_vocab)
-    #
-    # if doc.spans is not None:
-    #     for span in doc.spans:
-    #         if span.type == PER:
-    #             return span.extract_fact(names_extractor)
-    # else:
-    #     return ""
-    nlp_text = nlp(text)
-    matcher = Matcher(nlp.vocab)
+    emb = NewsEmbedding()
+    segmenter = Segmenter()
+    morph_vocab = MorphVocab()
 
-    pattern_full_name = [{'POS': 'PROPN'}, {'POS': 'PROPN'}, {'POS': 'PROPN', 'OP': '?'}]
-    matcher.add('NAME', [pattern_full_name])
-    matches = matcher(nlp_text)
+    names_extractor = NamesExtractor(morph_vocab)
+    morph_tagger = NewsMorphTagger(emb)
+    syntax_parser = NewsSyntaxParser(emb)
+    ner_tagger = NewsNERTagger(emb)
 
-    span = None
-    for i in range(len(matches)):
-        match, start, end = matches[i]
-        if span is None:
-            span = nlp_text[start:end]
-        elif matches[i][0] == matches[i-1][0] and matches[i-1][1] == matches[i][1]:
-            span = nlp_text[start:end]
-            break
-        else:
-            break
-    if span is not None:
-        return span.text
-    else:
-        return ""
+    doc = Doc(text)
+    doc.segment(segmenter)
+    doc.tag_morph(morph_tagger)
+    doc.parse_syntax(syntax_parser)
+    doc.tag_ner(ner_tagger)
 
+    for span in doc.spans:
+        span.normalize(morph_vocab)
+
+    for span in doc.spans:
+        if span.type == PER:
+            span.extract_fact(names_extractor)
+
+    name = ""
+    for i in doc.spans:
+        if i.fact:
+            obj = i.fact.as_dict
+            if ('first' in obj and
+                    'last' in obj and
+                        'middle' in obj):
+                name = i.text
+                break
+            elif (len(name) == 0 and
+                'first' in obj and
+                 'last' in obj):
+                name = i.text
+    return name
 def get_attributes_from_model(text):
     doc = nlp_model(text)
-    skills = []
-    edu = []
-    org = []
-    languages = []
-    self_summary = []
-    speciality = []
-    faculty = []
-    adr = []
-    data = []
-    name = []
+    dictionary = {
+        "SKILLS": set(),
+        "EDU": set(),
+        "ORG": set(),
+        "LANGUAGES": set(),
+        "SELF_SUMMARY": set(),
+        "SPECIALTY": set(),
+        "FACULTY": set(),
+        "ADR": set(),
+        "DATA": set(),
+        "PER": set()
+    }
 
-    for ents in doc.ents:
-        if ents.label_ == "SKILLS":
-            skills.append(ents.text)
-        elif ents.label_ == "EDU":
-            edu.append(ents.text)
-        elif ents.label_ == "ORG":
-            org.append(ents.text)
-        elif ents.label_ == "LANGUAGES":
-            languages.append(ents.text)
-        elif ents.label_ == "SELF_SUMMARY":
-            self_summary.append(ents.text)
-        elif ents.label_ == "SPECIALITY":
-            speciality.append(ents.text)
-        elif ents.label_ == "FACULTY":
-            faculty.append(ents.text)
-        elif ents.label_ == "ADR":
-            adr.append(ents.text)
-        elif ents.label_ == "DATA":
-            data.append(ents.text)
-        elif ents.label_ == "PER":
-            name.append(ents.text)
+    for ent in doc.ents:
+        ent_text = re.sub("[^\w\.]+", " ", ent.text)
+        ent_text = re.sub("(\B \B|\B | \B)+", "", ent_text)
+        # print(ent.text, ent.label_, ent_text)
+        if ent.label_ == "SKILLS":
+            dictionary["SKILLS"].add(ent_text.lower())
+        elif ent.label_ == "EDU":
+            dictionary["EDU"].add(ent_text)
+        elif ent.label_ == "ORG":
+            dictionary["ORG"].add(ent_text)
+        elif ent.label_ == "LANGUAGES":
+            dictionary["LANGUAGES"].add(ent_text.lower())
+        elif ent.label_ == "SELF_SUMMARY":
+            dictionary["SELF_SUMMARY"].add(ent_text.lower())
+        elif ent.label_ == "SPECIALTY":
+            dictionary["SPECIALTY"].add(ent_text.lower())
+        elif ent.label_ == "FACULTY":
+            dictionary["FACULTY"].add(ent_text)
+        elif ent.label_ == "ADR":
+            dictionary["ADR"].add(ent_text)
+        elif ent.label_ == "DATA":
+            dictionary["DATA"].add(ent_text.lower())
+        elif ent.label_ == "PER":
+            dictionary["PER"].add(ent_text)
 
-    return name, skills, edu, org, languages, self_summary, speciality, faculty, adr, data
+    return dictionary
