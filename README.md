@@ -23,7 +23,7 @@
 ```commandline
     python -m spacy download ru_core_news_lg
 ```
-6. Запустить исполняемый файл
+7. Запустить исполняемый файл
 ```
     .\CourseProject.exe
 ```

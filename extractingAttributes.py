@@ -19,9 +19,9 @@ from natasha import (
 )
 
 
-pathModel = sys.argv[0].split("\\pythonscript.exe")[0]
+pathModel = sys.argv[0].split("\\pythonscript.py")[0]
 nlp_model = spacy.load(pathModel + "\\ModelNER\\output\\model-best")
-nlp = spacy.load(pathModel + "\\ModelNER\\output\\ru_core_news_lg")
+nlp = spacy.load("ru_core_news_lg")
 
 def open_file(path):
     text = ""
