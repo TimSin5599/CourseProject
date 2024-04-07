@@ -4,12 +4,13 @@
 #include <tchar.h>
 #include <filesystem>
 #include <thread>
+#include <iostream>
 
 static TCHAR szWindowClass[] = _T("CourseProject");
 
 static TCHAR szTitle[] = _T("CourseProject");
 
-std::string fullPath = std::filesystem::current_path().string() + std::string("\\pythonscript.py");
+std::wstring fullPath = std::filesystem::current_path().wstring() + L"\\pythonscript.exe";
 
 HINSTANCE hInst;
 
@@ -166,22 +167,60 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
             if (LOWORD(wParam) == 1)
             {
                 // Показываем диалоговое окно открытия файла
-                OPENFILENAME ofn = {0};
-                TCHAR szFileName[MAX_PATH + 1] = {0};
+                OPENFILENAMEW ofn = {0};
+                wchar_t szFileName[MAX_PATH + 1] = {0};
 
                 ZeroMemory(&ofn, sizeof(ofn));
                 ofn.lStructSize = sizeof(ofn);
                 ofn.hwndOwner = hWnd;
-                ofn.lpstrFilter = _T("All Files (*.*)\0*.*\0Text Documents (*.txt)\0*.txt\0Word Documents (*.docx)\0*.docx\0PDF Documents (*.pdf)\0*.pdf\0");
-                ofn.lpstrFile = _T(szFileName);
+                ofn.lpstrFilter = L"All Files (*.*)\0*.*\0Text Documents (*.txt)\0*.txt\0Word Documents (*.docx)\0*.docx\0PDF Documents (*.pdf)\0*.pdf\0";
+                ofn.lpstrFile = szFileName;
                 ofn.nMaxFile = MAX_PATH;
                 ofn.Flags = OFN_EXPLORER | OFN_FILEMUSTEXIST | OFN_HIDEREADONLY;
 
-                if (GetOpenFileName(&ofn))
+//                if (GetOpenFileNameW(&ofn))
+//                {
+//                    std::string args = "python " + std::string("\"") + std::wstring_convert<std::codecvt_utf8<wchar_t>>().to_bytes(fullPath) + std::string("\" \"") +
+//                            std::wstring_convert<std::codecvt_utf8<wchar_t>>().to_bytes(szFileName) + std::string("\"");
+//                    std::thread thread(std::system, args.c_str());
+//                    thread.join();
+//                }
+                if (GetOpenFileNameW(&ofn))
                 {
-                    std::string command = "python " + fullPath + " " + szFileName;
-                    std::thread thread(std::system, command.c_str());
-                    thread.join();
+                    STARTUPINFOW si;
+                    ZeroMemory( &si, sizeof(si) );
+                    si.cb = sizeof(si);
+
+                    PROCESS_INFORMATION pi;
+                    ZeroMemory( &pi, sizeof(pi) );
+
+                    std::wstring args = L"\"";
+                    args.append(fullPath);
+                    args.append(L"\" \"");
+                    args.append(szFileName);
+                    args.append(L"\"");
+
+                    wchar_t *command = const_cast<wchar_t *>(args.c_str());
+
+
+                    if(!CreateProcessW(
+                            fullPath.c_str(),
+                            command,
+                            NULL,
+                            NULL,
+                            FALSE,
+                            0,
+                            NULL,
+                            NULL,
+                            &si,
+                            &pi))
+                    {
+                        printf( "CreateProcess failed (%d).\n", GetLastError() );
+                    }
+
+                    WaitForSingleObject( pi.hProcess, INFINITE );
+                    CloseHandle( pi.hProcess );
+                    CloseHandle( pi.hThread );
                 }
             }
             break;
