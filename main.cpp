@@ -10,7 +10,7 @@ static TCHAR szWindowClass[] = _T("CourseProject");
 
 static TCHAR szTitle[] = _T("CourseProject");
 
-std::wstring fullPath = std::filesystem::current_path().wstring() + L"\\pythonscript.exe";
+std::wstring fullPath = std::filesystem::current_path().wstring() + L"\\pythonscript.py";
 
 HINSTANCE hInst;
 
@@ -178,50 +178,52 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
                 ofn.nMaxFile = MAX_PATH;
                 ofn.Flags = OFN_EXPLORER | OFN_FILEMUSTEXIST | OFN_HIDEREADONLY;
 
-//                if (GetOpenFileNameW(&ofn))
-//                {
-//                    std::string args = "python " + std::string("\"") + std::wstring_convert<std::codecvt_utf8<wchar_t>>().to_bytes(fullPath) + std::string("\" \"") +
-//                            std::wstring_convert<std::codecvt_utf8<wchar_t>>().to_bytes(szFileName) + std::string("\"");
-//                    std::thread thread(std::system, args.c_str());
-//                    thread.join();
-//                }
+                // Для запуска файлов .py
                 if (GetOpenFileNameW(&ofn))
                 {
-                    STARTUPINFOW si;
-                    ZeroMemory( &si, sizeof(si) );
-                    si.cb = sizeof(si);
-
-                    PROCESS_INFORMATION pi;
-                    ZeroMemory( &pi, sizeof(pi) );
-
-                    std::wstring args = L"\"";
-                    args.append(fullPath);
-                    args.append(L"\" \"");
-                    args.append(szFileName);
-                    args.append(L"\"");
-
-                    wchar_t *command = const_cast<wchar_t *>(args.c_str());
-
-
-                    if(!CreateProcessW(
-                            fullPath.c_str(),
-                            command,
-                            NULL,
-                            NULL,
-                            FALSE,
-                            0,
-                            NULL,
-                            NULL,
-                            &si,
-                            &pi))
-                    {
-                        printf( "CreateProcess failed (%d).\n", GetLastError() );
-                    }
-
-                    WaitForSingleObject( pi.hProcess, INFINITE );
-                    CloseHandle( pi.hProcess );
-                    CloseHandle( pi.hThread );
+                    std::string args = "python " + std::string("\"") + std::wstring_convert<std::codecvt_utf8<wchar_t>>().to_bytes(fullPath) + std::string("\" \"") +
+                            std::wstring_convert<std::codecvt_utf8<wchar_t>>().to_bytes(szFileName) + std::string("\"");
+                    std::thread thread(std::system, args.c_str());
+                    thread.join();
                 }
+                // Для запуска файлов .exe
+//                if (GetOpenFileNameW(&ofn))
+//                {
+//                    STARTUPINFOW si;
+//                    ZeroMemory( &si, sizeof(si) );
+//                    si.cb = sizeof(si);
+//
+//                    PROCESS_INFORMATION pi;
+//                    ZeroMemory( &pi, sizeof(pi) );
+//
+//                    std::wstring args = L"\"";
+//                    args.append(fullPath);
+//                    args.append(L"\" \"");
+//                    args.append(szFileName);
+//                    args.append(L"\"");
+//
+//                    wchar_t *command = const_cast<wchar_t *>(args.c_str());
+//
+//
+//                    if(!CreateProcessW(
+//                            fullPath.c_str(),
+//                            command,
+//                            NULL,
+//                            NULL,
+//                            FALSE,
+//                            0,
+//                            NULL,
+//                            NULL,
+//                            &si,
+//                            &pi))
+//                    {
+//                        printf( "CreateProcess failed (%d).\n", GetLastError() );
+//                    }
+//
+//                    WaitForSingleObject( pi.hProcess, INFINITE );
+//                    CloseHandle( pi.hProcess );
+//                    CloseHandle( pi.hThread );
+//                }
             }
             break;
         }
