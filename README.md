@@ -18,11 +18,7 @@
 ```commandline
     pip install -r requirements.txt
 ```
-5. Установить модель spacy для русского языка
-```commandline
-    python -m spacy download ru_core_news_lg
-```
-7. Запустить исполняемый файл
+5. Запустить исполняемый файл
 ```
     .\CourseProject.exe
 ```
