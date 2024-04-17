@@ -1,7 +1,6 @@
 import sys
 import tkinter as tk
 from tkinter import messagebox
-
 import fitz
 from docx import Document
 import spacy
@@ -20,7 +19,6 @@ from natasha import (
 
 pathModel = sys.argv[0].split("\\pythonscript.py")[0]
 nlp_model = spacy.load(pathModel + "\\ModelNER\\output\\model-best")
-nlp = spacy.load("ru_core_news_lg")
 
 def open_file(path):
     text = ""
@@ -50,27 +48,32 @@ def open_file(path):
     return text
 
 def get_phone_number(text):
-    phones = re.findall(r"(?:(?:8|\+7|7)[\-\s]?)+(?:\(?\d{3}\)?[\-\s]?)+[\d\-\s]{7,10}", text)
-    if len(phones) == 0:
-        return ""
-    text_ = str(phones[0])
-    text_ = text_[::-1].replace(" ", "", 1)[::-1]
-    text_ = text_.replace(" ", "-")
-    text_ = text_.replace("\n", " ")
+    phones = re.search(r"(?:(?:8|\+7|7)[\-\s]?)+(?:\(?\d{3}\)?[\-\s]?)+[\d\-\s]{7,10}", text)
+    if phones is None:
+        return "-"
+    text_ = phones.group()
+    text_ = re.sub("[^\d\+\(\)]+", " ", text_)
     return text_
 
 def get_experience(text):
-    match = re.findall(r'Опыт\s*работы[^\d\w]*([\u0401\u0451\u0410-\u044f\d]+\s+'
+    match = re.search(r'Опыт\s*работы[^\d\w]*([\u0401\u0451\u0410-\u044f\d]+\s+'
                        r'[\u0401\u0451\u0410-\u044f\d]+\s+[\u0401\u0451\u0410-\u044f\d]+\s+[\u0401\u0451\u0410-\u044f\d]+)', text)
-    if len(match) != 0:
-        return match
-    return ""
+    if match is not None:
+        return match.group()
+    return "-"
+
+def get_salary(text):
+    match = re.search(r'[\d{1,} ]{2,}(руб|\$|\₽|\€)\.?', text)
+
+    if match is not None:
+        return match.group()
+    return "-"
 
 def get_email(text):
-    emails = re.findall(r"[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}", text)
-    if len(emails) == 0:
-        return ""
-    return emails[0]
+    emails = re.search(r"[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}", text)
+    if emails is None:
+        return "-"
+    return emails.group()
 
 def get_name(text):
     emb = NewsEmbedding()
@@ -108,6 +111,13 @@ def get_name(text):
                 'first' in obj and
                  'last' in obj):
                 name = i.text
+
+    if len(name) == 0:
+        name = "-"
+
+    name = re.sub("[^\w\.]+", " ", name)
+    name = re.sub("(\B \B|\B | \B)+", "", name)
+
     return name
 def get_attributes_from_model(text):
     doc = nlp_model(text)
@@ -121,13 +131,15 @@ def get_attributes_from_model(text):
         "FACULTY": set(),
         "ADR": set(),
         "DATA": set(),
-        "PER": set()
+        "PER": set(),
+        "DEGREE": set()
     }
 
     for ent in doc.ents:
         ent_text = re.sub("[^\w\.]+", " ", ent.text)
         ent_text = re.sub("(\B \B|\B | \B)+", "", ent_text)
-        # print(ent.text, ent.label_, ent_text)
+        ent_text = ent_text.lower()
+
         if ent.label_ == "SKILLS":
             dictionary["SKILLS"].add(ent_text.lower())
         elif ent.label_ == "EDU":
@@ -145,8 +157,23 @@ def get_attributes_from_model(text):
         elif ent.label_ == "ADR":
             dictionary["ADR"].add(ent_text)
         elif ent.label_ == "DATA":
-            dictionary["DATA"].add(ent_text.lower())
+            if len(ent_text.split(" ")) >= 3 and len(dictionary["DATA"]) == 0:
+                dictionary["DATA"].add(ent_text.lower())
         elif ent.label_ == "PER":
             dictionary["PER"].add(ent_text)
+
+    enum = {"Среднее", "Высшее", "Магистр", "Бакалавр", "Аспирант",
+            "Бакалавриат", "Магистратура", "Аспирантура"}
+
+    for i in dictionary["EDU"]:
+        for j in enum:
+            i_text = i.lower()
+            j_text = j.lower()
+            if j_text in i_text:
+                dictionary["DEGREE"].add(i)
+                break
+
+    for i in dictionary["DEGREE"]:
+        dictionary["EDU"].remove(i)
 
     return dictionary
