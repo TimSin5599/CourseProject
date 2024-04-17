@@ -4,7 +4,6 @@
 #include <tchar.h>
 #include <filesystem>
 #include <thread>
-#include <iostream>
 
 static TCHAR szWindowClass[] = _T("CourseProject");
 
